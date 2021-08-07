@@ -89,6 +89,15 @@ section {
   }
 }
 
+.slick-dots li button::before {
+  font-size: 60px;
+  opacity: .1;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #EF5448;
+}
+
 header {
   padding: 30px 0;
 }
@@ -660,6 +669,12 @@ header .burger_menu .line3.show {
   }
 }
 
+@media (max-width: 576px) {
+  #what_wait {
+    padding-top: 0 !important;
+  }
+}
+
 #what_wait .header-title {
   margin: 5rem 0 4rem;
 }
@@ -1029,6 +1044,7 @@ header .burger_menu .line3.show {
   #costs .all_in_one {
     background-size: contain;
     position: relative;
+    padding-top: 120px;
   }
 }
 
@@ -1172,6 +1188,10 @@ header .burger_menu .line3.show {
 #testimonials .slider {
   max-width: 1100px;
   margin: 60px auto 0;
+}
+
+#testimonials .slider .slick-dots {
+  bottom: -60px;
 }
 
 @media (max-width: 992px) {

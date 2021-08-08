@@ -59,6 +59,9 @@ a {
 @mixin _1400px {
     @media (max-width: 1400px) { @content; }
 }
+@mixin _1399px {
+    @media (max-width: 1399px) { @content; }
+}
 @mixin _1360px {
     @media (max-width: 1360px) { @content; }
 }
@@ -123,6 +126,13 @@ section {
         }
     }
 }
+.red_btn {
+    @include buttons(700, 18px, #fff, #EF5448, none, 40px, 300px, 70px, uppercase);
+    transition: .3s;
+    &:hover {
+        background: #102543;
+    }
+}
 .slick-dots {
     li {
         button {
@@ -140,6 +150,7 @@ section {
         }
     }
 }
+// ========================================= Главная страинца:
 header {
     padding: 30px 0;
     .logo {
@@ -192,6 +203,9 @@ header {
                     &:hover {
                         text-decoration: underline;
                     }
+                    &.active {
+                        font-weight: 700;
+                    } 
                     @include _1200px() {
                         font-size: 20px;
                         line-height: 24px;
@@ -896,6 +910,9 @@ header {
             }
         }
     }
+    .acc_parent_last {
+        border-bottom: 1px solid #848199;
+    }
     .acc_parent {
         max-width: 1030px;
         width: 100%;
@@ -1115,6 +1132,119 @@ footer {
             @include _1200px() {
                 margin-bottom: 10px;
             }
+        }
+    }
+}
+// ==================== Страница "Пример тренировок":
+#training {
+    .training_block {
+        padding: 40px 0 55px;
+        @include _992px() {
+            padding: 30px 0;
+        }
+        @include _767px() {
+            text-align: center
+        }
+        h1 {
+            @include title(900, 60px, 130%, #102543, uppercase);
+            @include _1200px() {
+                font-size: 32px;
+            }
+            @include _360px() {
+                font-size: 28px;
+            }
+        }
+        ul {
+            padding-top: 30px;
+            max-width: 722px; 
+            @include _1399px() {
+                max-width: 630px;
+                @include _992px() {
+                    max-width: inherit;
+                    padding-right: 55px;
+                }
+                @include _767px() {
+                    padding-right: 0;
+                }
+            }
+            li {
+                @include desc(400, 16px, 130%, #102543);
+                padding: 4px 0;
+            }
+        }
+        span {
+            @include desc(700, 16px, 130%, #102543);
+            margin-left: 14px;
+            @include _1200px() {
+                display: none;
+            }
+            svg {
+                position: absolute;
+                top: 10px;
+                right: -30px;
+            }
+        }
+        .training_img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            @include _992px() {
+                top: auto;
+                bottom: -5px;
+                width: 50%;
+            }
+            @include _767px() {
+                display: none;
+            }
+        }
+        .btn_container {
+            @include _992px() {
+                margin: 20px 0 0 !important;
+            }
+            button {
+                @include _767px() {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    .video_block {
+        position: relative;
+        max-width: 1294px;
+        width: 100%;
+        margin: 0 auto;
+        @include _576px() {
+            padding-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 640px;
+            @include _1200px() {
+                height: 520px;
+            }
+            @include _992px() {
+                height: 430px;
+            }
+            @include _576px() {
+                height: 185px;
+            }
+        }
+    }
+    button {
+        @include _1200px() {
+            font-size: 24px;
+            width: 400px;
+            height: 80px;
+        }
+        @include _576px() {
+            font-size: 18px;
+            width: 280px;
+            height: 60px;
+        }
+    }
+    .mobi_btn {
+        @include _576px() {
+            display: none !important;
         }
     }
 }

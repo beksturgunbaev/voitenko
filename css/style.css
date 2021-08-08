@@ -89,6 +89,34 @@ section {
   }
 }
 
+.red_btn {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  background: #EF5448;
+  border: none;
+  border-radius: 40px;
+  width: 300px;
+  height: 70px;
+  text-transform: uppercase;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transition: .3s;
+}
+
+.red_btn:hover {
+  background: #102543;
+}
+
 .slick-dots li button::before {
   font-size: 60px;
   opacity: .1;
@@ -181,6 +209,10 @@ header .mobile_menu .menu li a {
 
 header .mobile_menu .menu li a:hover {
   text-decoration: underline;
+}
+
+header .mobile_menu .menu li a.active {
+  font-weight: 700;
 }
 
 @media (max-width: 1200px) {
@@ -1281,6 +1313,10 @@ header .burger_menu .line3.show {
   content: 'ВОПРОСЫ';
 }
 
+#questions .acc_parent_last {
+  border-bottom: 1px solid #848199;
+}
+
 #questions .acc_parent {
   max-width: 1030px;
   width: 100%;
@@ -1631,6 +1667,184 @@ footer .footer_links a:last-child {
 @media (max-width: 1200px) {
   footer .footer_links a {
     margin-bottom: 10px;
+  }
+}
+
+#training .training_block {
+  padding: 40px 0 55px;
+}
+
+@media (max-width: 992px) {
+  #training .training_block {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #training .training_block {
+    text-align: center;
+  }
+}
+
+#training .training_block h1 {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 130%;
+  color: #102543;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  #training .training_block h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 360px) {
+  #training .training_block h1 {
+    font-size: 28px;
+  }
+}
+
+#training .training_block ul {
+  padding-top: 30px;
+  max-width: 722px;
+}
+
+@media (max-width: 1399px) {
+  #training .training_block ul {
+    max-width: 630px;
+  }
+}
+
+@media (max-width: 1399px) and (max-width: 992px) {
+  #training .training_block ul {
+    max-width: inherit;
+    padding-right: 55px;
+  }
+}
+
+@media (max-width: 1399px) and (max-width: 767px) {
+  #training .training_block ul {
+    padding-right: 0;
+  }
+}
+
+#training .training_block ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #102543;
+  padding: 4px 0;
+}
+
+#training .training_block span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #102543;
+  margin-left: 14px;
+}
+
+@media (max-width: 1200px) {
+  #training .training_block span {
+    display: none;
+  }
+}
+
+#training .training_block span svg {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+}
+
+#training .training_block .training_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 992px) {
+  #training .training_block .training_img {
+    top: auto;
+    bottom: -5px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  #training .training_block .training_img {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #training .training_block .btn_container {
+    margin: 20px 0 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #training .training_block .btn_container button {
+    margin: 0 auto;
+  }
+}
+
+#training .video_block {
+  position: relative;
+  max-width: 1294px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  #training .video_block {
+    padding-bottom: 20px;
+  }
+}
+
+#training .video_block iframe {
+  width: 100%;
+  height: 640px;
+}
+
+@media (max-width: 1200px) {
+  #training .video_block iframe {
+    height: 520px;
+  }
+}
+
+@media (max-width: 992px) {
+  #training .video_block iframe {
+    height: 430px;
+  }
+}
+
+@media (max-width: 576px) {
+  #training .video_block iframe {
+    height: 185px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #training button {
+    font-size: 24px;
+    width: 400px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  #training button {
+    font-size: 18px;
+    width: 280px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  #training .mobi_btn {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1438,7 +1438,7 @@ header .burger_menu .line3.show {
 }
 
 #partners .header-title h2::before {
-  content: 'Партнер';
+  content: 'Партнеры';
 }
 
 @media (max-width: 576px) {
@@ -2204,5 +2204,20 @@ footer .footer_links a:last-child {
 
 #example_menu .breakfast img {
   margin: 20px auto;
+}
+
+#oformlenie h2 {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 120%;
+  color: #102543;
+}
+
+#oformlenie h2 svg {
+  margin: 5px 20px 0;
+}
+
+#oformlenie h2 span {
+  color: #D8D8D8;
 }
 /*# sourceMappingURL=style.css.map */

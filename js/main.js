@@ -117,3 +117,4 @@ const mediaQueryTwo = window.matchMedia('(max-width: 1200px)');
 if(mediaQueryTwo.matches) {
     document.querySelector('.sign_in a').innerText = 'Вход';
 }
+

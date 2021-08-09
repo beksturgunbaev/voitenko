@@ -984,7 +984,7 @@ header {
     .header-title {
         h2 {
             &::before {
-                content: 'Партнер';
+                content: 'Партнеры';
             }
         }
     }
@@ -1460,7 +1460,7 @@ footer {
     }
 }
 
-// Страница пример меню:
+// Страница "Пример меню":
 #example_menu {
     h1 {
         @include title(900, 60px, 130%, #102543, uppercase);
@@ -1485,6 +1485,19 @@ footer {
         }
         img {
             margin: 20px auto;
+        }
+    }
+}
+
+// Страница "Оформление заказа":
+#oformlenie {
+    h2 {
+        @include desc(900, 28px, 120%, #102543);
+        svg {
+            margin: 5px 20px 0;
+        }
+        span {
+            color: #D8D8D8;
         }
     }
 }

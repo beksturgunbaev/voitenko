@@ -34,6 +34,17 @@ $(document).ready(function() {
         ]
     });
 
+    $('.partners_slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        draggable: true,
+        infinity: true,
+        dots: false,
+        prevArrow: '<img class="prev_btn" src="img/arrow-left.png"/>',
+        nextArrow: '<img class="next_btn" src="img/arrow-right.png"/>',
+    });
+
     if($(window).width() < 992 && $(window).width() > 576) {
         $('.card_parent').addClass('card_slider');
     }

@@ -985,6 +985,46 @@ header {
             }
         }
     }
+    .partners_slider {
+        @include _576px() {
+            margin: 0 20px;
+        }
+        .partners_slide {
+            margin: 0 40px;
+            @include _576px() {
+                margin: 0 10px;
+            }
+            img {
+                margin: 0 auto;
+            }
+        }
+        .prev_btn {
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translate(0, -50%);
+            z-index: 1;
+            width: 70px;
+            cursor: pointer;
+            @include _576px() {
+                width: 50px;
+                left: -30px;
+            }
+        }
+        .next_btn {
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            transform: translate(0, -50%);
+            z-index: 1;
+            width: 70px;
+            cursor: pointer;
+            @include _576px() {
+                width: 50px;    
+                right: -30px;
+            }
+        }
+    }
 }
 #mob_app {
     @include _576px() {
@@ -1245,6 +1285,169 @@ footer {
     .mobi_btn {
         @include _576px() {
             display: none !important;
+        }
+    }
+}
+
+// =================== Страница "Интернет-магазин":
+#online_shop {
+    .shop_block {
+        position: relative;
+        .apple_img {
+            top: 90px;
+            left: -10px;
+            z-index: -1;
+            @include _992px() {
+                top: 70px;
+                left: 0;
+            }
+            @include _576px() {
+                top: 40px;
+                width: 40%;
+            }
+        }
+        .gantle1_img {
+            top: 65px;
+            right: 14%;
+            z-index: -1;
+            @include _992px() {
+                top: 32%;
+                right: 28%;
+            }
+        }
+        .gantle2_img {
+            top: 48%;
+            right: -54px;
+            z-index: -1;
+            @include _992px() {
+                top: 64%;
+                right: 18%;
+            }
+        }
+        .four_img {
+            bottom: 0;
+            right: 18%;
+            z-index: -1;
+            @include _992px() {
+                bottom: -40px;
+                right: 21%;
+            }
+            @include _576px() {
+                width: 70%;
+                right: 0;
+            }
+        }
+        h1 {
+            @include title(900, 60px, 130%, #102543, uppercase);
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 60px;
+            @include _992px() {
+                font-size: 40px;
+            }
+            @include _576px() {
+                font-size: 28px;
+                margin-bottom: 50px;
+                padding: 0;
+            }
+            @include _360px() {
+                font-size: 28px;
+            }
+        }
+        .last_div {
+            @include _992px() {
+                margin-right: auto;
+            }
+            @include _576px() {
+                margin: 12px auto 90px;
+            }
+        }
+        .shop_card_block {
+            background: #FFFFFF;
+            box-shadow: 0px 10px 20px rgba(16, 37, 67, 0.2);
+            border-radius: 20px;
+            padding: 0 30px 30px;
+            margin: 30px 0;
+            @include _992px() {
+                margin: 12px 0;
+            }
+            .shop_card {
+                min-height: 600px;
+                @include _576px() {
+                    min-height: auto;
+                }
+                img {
+                    bottom: -55px;
+                    right: -55px;
+                    @include _576px() {
+                        width: 20%;
+                        right: -36px;
+                        bottom: -48px
+                    }
+                }
+                .card_cost {
+                    @include desc(900, 28px, 130%, #fff);
+                    text-align: center;
+                    padding: 14px 7px 7px;
+                    max-width: 242px;
+                    width: 100%;
+                    height: 90px;
+                    margin: 0 auto;
+                    background-image: url(../img/online-shop/ramka.png);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                h3 {
+                    @include desc(900, 28px, 34px, #102543);
+                    text-align: center;
+                    margin: 40px 0;
+                    @include _992px() {
+                        margin: 18px 0 10px;
+                    }
+                    @include _576px() {
+                        margin: 40px 0 25px;
+                    }
+                }
+                h5 {
+                    @include desc(700, 16px, 130%, #102543);
+                }
+                ul {
+                    padding: 10px 0 0 18px;
+                    @include _992px() {
+                        padding: 4px 0 0 18px;
+                    }
+                    li {
+                        @include desc(400, 14px, 130%, #102543);
+                        position: relative;
+                        margin: 10px 0;
+                        &::before {
+                            content: ''; 
+                            position: absolute;
+                            top: 5px;
+                            left: -15px;
+                            min-width: 4px;
+                            min-height: 4px;
+                            border-radius: 50%;
+                            background: #102543;
+                            @include _992px() {
+                                top: 7px;
+                            }
+                        }
+                    }
+                }
+                .text-center {
+                    margin-bottom: 20px;
+                }
+                button {
+                    width: 224px;
+                    height: 54px;
+                    font-size: 16px;
+                    @include _576px() {
+                        margin: 50px 0 20px;
+                    }
+                }
+            }
         }
     }
 }

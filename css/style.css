@@ -1438,6 +1438,62 @@ header .burger_menu .line3.show {
 }
 
 @media (max-width: 576px) {
+  #partners .partners_slider {
+    margin: 0 20px;
+  }
+}
+
+#partners .partners_slider .partners_slide {
+  margin: 0 40px;
+}
+
+@media (max-width: 576px) {
+  #partners .partners_slider .partners_slide {
+    margin: 0 10px;
+  }
+}
+
+#partners .partners_slider .partners_slide img {
+  margin: 0 auto;
+}
+
+#partners .partners_slider .prev_btn {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 1;
+  width: 70px;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  #partners .partners_slider .prev_btn {
+    width: 50px;
+    left: -30px;
+  }
+}
+
+#partners .partners_slider .next_btn {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 1;
+  width: 70px;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  #partners .partners_slider .next_btn {
+    width: 50px;
+    right: -30px;
+  }
+}
+
+@media (max-width: 576px) {
   #mob_app {
     padding-bottom: 50px;
   }
@@ -1845,6 +1901,254 @@ footer .footer_links a:last-child {
 @media (max-width: 576px) {
   #training .mobi_btn {
     display: none !important;
+  }
+}
+
+#online_shop .shop_block {
+  position: relative;
+}
+
+#online_shop .shop_block .apple_img {
+  top: 90px;
+  left: -10px;
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .apple_img {
+    top: 70px;
+    left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block .apple_img {
+    top: 40px;
+    width: 40%;
+  }
+}
+
+#online_shop .shop_block .gantle1_img {
+  top: 65px;
+  right: 14%;
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .gantle1_img {
+    top: 32%;
+    right: 28%;
+  }
+}
+
+#online_shop .shop_block .gantle2_img {
+  top: 48%;
+  right: -54px;
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .gantle2_img {
+    top: 64%;
+    right: 18%;
+  }
+}
+
+#online_shop .shop_block .four_img {
+  bottom: 0;
+  right: 18%;
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .four_img {
+    bottom: -40px;
+    right: 21%;
+  }
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block .four_img {
+    width: 70%;
+    right: 0;
+  }
+}
+
+#online_shop .shop_block h1 {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 130%;
+  color: #102543;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block h1 {
+    font-size: 28px;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  #online_shop .shop_block h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .last_div {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block .last_div {
+    margin: 12px auto 90px;
+  }
+}
+
+#online_shop .shop_block .shop_card_block {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 20px rgba(16, 37, 67, 0.2);
+          box-shadow: 0px 10px 20px rgba(16, 37, 67, 0.2);
+  border-radius: 20px;
+  padding: 0 30px 30px;
+  margin: 30px 0;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .shop_card_block {
+    margin: 12px 0;
+  }
+}
+
+#online_shop .shop_block .shop_card_block .shop_card {
+  min-height: 600px;
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block .shop_card_block .shop_card {
+    min-height: auto;
+  }
+}
+
+#online_shop .shop_block .shop_card_block .shop_card img {
+  bottom: -55px;
+  right: -55px;
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block .shop_card_block .shop_card img {
+    width: 20%;
+    right: -36px;
+    bottom: -48px;
+  }
+}
+
+#online_shop .shop_block .shop_card_block .shop_card .card_cost {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 130%;
+  color: #fff;
+  text-align: center;
+  padding: 14px 7px 7px;
+  max-width: 242px;
+  width: 100%;
+  height: 90px;
+  margin: 0 auto;
+  background-image: url(../img/online-shop/ramka.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#online_shop .shop_block .shop_card_block .shop_card h3 {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 34px;
+  color: #102543;
+  text-align: center;
+  margin: 40px 0;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .shop_card_block .shop_card h3 {
+    margin: 18px 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block .shop_card_block .shop_card h3 {
+    margin: 40px 0 25px;
+  }
+}
+
+#online_shop .shop_block .shop_card_block .shop_card h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  color: #102543;
+}
+
+#online_shop .shop_block .shop_card_block .shop_card ul {
+  padding: 10px 0 0 18px;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .shop_card_block .shop_card ul {
+    padding: 4px 0 0 18px;
+  }
+}
+
+#online_shop .shop_block .shop_card_block .shop_card ul li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #102543;
+  position: relative;
+  margin: 10px 0;
+}
+
+#online_shop .shop_block .shop_card_block .shop_card ul li::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -15px;
+  min-width: 4px;
+  min-height: 4px;
+  border-radius: 50%;
+  background: #102543;
+}
+
+@media (max-width: 992px) {
+  #online_shop .shop_block .shop_card_block .shop_card ul li::before {
+    top: 7px;
+  }
+}
+
+#online_shop .shop_block .shop_card_block .shop_card .text-center {
+  margin-bottom: 20px;
+}
+
+#online_shop .shop_block .shop_card_block .shop_card button {
+  width: 224px;
+  height: 54px;
+  font-size: 16px;
+}
+
+@media (max-width: 576px) {
+  #online_shop .shop_block .shop_card_block .shop_card button {
+    margin: 50px 0 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1405,12 +1405,20 @@ footer {
                     min-height: auto;
                 }
                 img {
-                    bottom: -55px;
-                    right: -55px;
+                    bottom: -48px;
+                    right: -40px;
                     @include _576px() {
                         width: 20%;
                         right: -36px;
-                        bottom: -48px
+                        bottom: -45px
+                    }
+                }
+                .grape_img2 {
+                    bottom: -60px !important;
+                    right: -50px !important;
+                    @include _576px() {
+                        right: -45px !important;
+                        bottom: -50px !important;
                     }
                 }
                 .card_cost {
@@ -1496,7 +1504,7 @@ footer {
     }
     .breakfast {
         img {
-            margin: 30px auto;
+            margin: 10px auto;
         }
     }
 }
@@ -1780,20 +1788,149 @@ footer {
 
 // Страница "Авторизованный":
 .authorized {
-    .main_left {
-        h1 {
-            font-size: 60px !important;
+    padding-bottom: 0 !important;
+    h1 {
+        @include title(900, 60px !important, 120%, #102543, uppercase);
+        @include _1200px() {
+            font-size: 32px !important;
         }
-        p {
-            max-width: 484px;
+        @include _576px() {
+            font-size: 28px !important;
         }
-        button {
-            font-size: 40px !important;
-            width: 440px !important;
-            height: 92px !important;
+        @include _360px() {
+            font-size: 24px !important;
+        }
+    }
+    p {
+        max-width: 484px;
+    }
+    button {
+        font-size: 40px !important;
+        width: 440px !important;
+        height: 92px !important;
+        @include _1200px() {
+            font-size: 24px !important;
+            width: 300px !important;
+            height: 70px !important;    
+        }
+        @include _576px() {
+            height: 70px !important;
         }
     }
     .main_img {
         margin-left: -20px !important; 
+        @include _1400px() {
+            margin-left: 30px !important;
+            img {
+                width: 80%;
+            }
+        }
+        @include _1200px() {
+            margin-left: 0 !important;
+        }
+    }
+}
+.authorized_btns {
+    button {
+        @include buttons(700, 20px !important, #fff, #102543, none, 40px, 250px !important, 68px !important, uppercase);
+        margin: 20px;
+        &:hover {
+            background: #EF5448;
+        }
+    }
+}
+.header-title-two {
+    h2 {
+        &::before {
+            content: '' !important;
+        }
+    }
+}
+.author_block {
+    position: relative;
+    width: 100%;
+    padding-top: 70px;
+    min-height: 390px;
+    text-align: center;
+    margin: 70px 0 30px;
+    background-image: url(../img/authorized/author-bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    img {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    .left_img {
+        left: 0;
+    }
+    .right_img {
+        right: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+        h1 {
+            @include title(900, 80px, 98px, #102543, uppercase);
+        }
+        button {
+            margin: 30px auto 20px !important;
+        }
+    }
+}
+.author_block4 { 
+    img {
+        top: auto !important;
+    }
+}
+.authorized_about {
+    padding-bottom: 30px;
+    h3 {
+        font-size: 40px !important;
+        padding-top: 20px;
+    }
+    p {
+        font-size: 24px !important;
+        margin-bottom: 30px !important;
+        max-width: 720px !important;
+    }
+    ul {
+        li {
+            margin-right: 30px;
+        }
+    }
+}
+#author_container {
+    h3 {
+        @include title(900, 40px, 120%, #102543, uppercase);
+        margin-bottom: 70px;
+    }
+    .author_blog {
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        min-height: 250px;
+        h2 {
+            @include title(700, 40px, 49px, #102543, uppercase);
+        }
+        p {
+            @include desc(400, 20px, 24px, #102543);
+            max-width: 314px;
+            margin: 20px auto 0;
+        }
+        button {
+            margin: 30px auto 0;
+            width: 200px !important; 
+            height: 50px !important;
+            font-size: 18px !important;
+        }
+    }
+    .author_blog1 {
+        background-image: url(../img/authorized/blog-bg1.png);
+    }
+    .author_blog2 {
+        background-image: url(../img/authorized/blog-bg2.png);
     }
 }

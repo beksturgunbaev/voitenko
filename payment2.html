@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,21 @@
     <link rel="stylesheet" href="css/libs/slick.css">
     <link rel="stylesheet" href="css/libs/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Марафон - твоё идеально тело в надёжных руках</title>
+    <title>Оплата заказа</title>
 </head>
 <body>
+    <div class="whatsapp_modal">
+        <div class="content">
+            <div class="close">&times;</div>
+            <h4>Оплата переводом СберОнлайн</h4>
+            <p>Для оплаты переводом через Сбербанк Онлайн напишите мне в Whatsapp</p>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M43.747 35.955C42.9984 35.5825 39.3284 33.7875 38.6451 33.5375C37.9618 33.29 37.4644 33.1675 36.9645 33.9125C36.4672 34.6525 35.0378 36.3275 34.6032 36.8225C34.1661 37.32 33.7315 37.38 32.9855 37.01C32.2394 36.635 29.8329 35.8525 26.9817 33.3225C24.7636 31.3526 23.2639 28.9201 22.8293 28.1751C22.3948 27.4326 22.7816 27.0301 23.1559 26.6601C23.4925 26.3276 23.902 25.7926 24.2763 25.3601C24.6506 24.9251 24.7736 24.6151 25.0223 24.1176C25.2735 23.6226 25.1479 23.1901 24.9595 22.8176C24.7736 22.4451 23.2815 18.7876 22.6585 17.3001C22.0531 15.8526 21.4377 16.0501 20.9805 16.0251C20.5434 16.0051 20.046 16.0001 19.5486 16.0001C19.0512 16.0001 18.2424 16.1851 17.5591 16.9301C16.8733 17.6726 14.9466 19.4701 14.9466 23.1276C14.9466 26.7826 17.6194 30.3151 17.9937 30.8125C18.368 31.3075 23.2564 38.8125 30.7447 42.03C32.5283 42.795 33.9174 43.2525 35.0001 43.5925C36.7887 44.16 38.4165 44.08 39.7026 43.8875C41.1345 43.675 44.1188 42.09 44.7418 40.355C45.3623 38.62 45.3623 37.1325 45.1764 36.8225C44.9905 36.5125 44.4931 36.3275 43.7445 35.955H43.747ZM30.1268 54.4625H30.1167C25.669 54.4633 21.303 53.2734 17.4762 51.0175L16.5719 50.4825L7.17185 52.9375L9.68137 43.8175L9.09104 42.8825C6.60448 38.9434 5.28857 34.3845 5.29536 29.7325C5.30038 16.1076 16.4387 5.02259 30.1368 5.02259C36.7686 5.02259 43.0035 7.59759 47.6909 12.2676C50.0029 14.559 51.8354 17.284 53.0824 20.2848C54.3294 23.2856 54.9661 26.5028 54.9557 29.75C54.9507 43.375 43.8123 54.4625 30.1268 54.4625ZM51.258 8.72009C48.4902 5.9474 45.197 3.74894 41.5693 2.2521C37.9416 0.755261 34.0514 -0.0101906 30.1243 0.000102444C13.6604 0.000102444 0.256227 13.3376 0.251203 29.7301C0.248691 34.97 1.62277 40.085 4.2378 44.5925L0 60L15.8358 55.865C20.2165 58.2403 25.1256 59.4849 30.1142 59.485H30.1268C46.5906 59.485 59.9948 46.1475 59.9999 29.7526C60.012 25.8457 59.2456 21.9753 57.7451 18.3652C56.2446 14.755 54.0397 11.4768 51.258 8.72009Z" fill="#85B057"/>
+                </svg>
+            </a>
+        </div>
+    </div>
     <header>
         <div class="container">
             <div class="extra_cl d-flex justify-content-between align-items-center">
@@ -19,9 +31,9 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between mobile_menu">
                     <ul class="menu d-flex align-items-center justify-content-between">
-                        <li><a href="./online-shop.html">Интернет-магазин</a></li>
+                        <li><a class="active" href="./online-shop.html">Интернет-магазин</a></li>
                         <li><a href="./example-workouts.html">Пример тренировок</a></li>
-                        <li><a class="active" href="./example-menu.html">Пример меню</a></li>
+                        <li><a href="./example-menu.html">Пример меню</a></li>
                         <li><a href="#">Разбор продуктов</a></li>
                     </ul>
                     <ul class="soc_links d-flex align-items-center">
@@ -52,28 +64,73 @@
             </div>
         </div>
     </header>
-        <section id="example_menu">
-            <div class="container">
-                <h1 class="text-center">Пример меню</h1>
-                <button class="red_btn m-auto my-3">КУПИТЬ МЕНЮ</button>
-                <div class="breakfast">
-                    <img src="./img/example-menu/breakfast.png" alt="breakfast menu" class="img-fluid">
-                    <img src="./img/example-menu/breakfast2.png" alt="breakfast menu" class="img-fluid">
-                    <img src="./img/example-menu/breakfast3.png" alt="breakfast menu" class="img-fluid">
-                    <img src="./img/example-menu/perekusy.png" alt="perekusy" class="img-fluid">
-                    <img src="./img/example-menu/lunch.png" alt="lunch menu" class="img-fluid">
-                    <img src="./img/example-menu/lunch2.png" alt="lunch menu" class="img-fluid">
-                    <img src="./img/example-menu/lunch3.png" alt="lunch menu" class="img-fluid">
-                    <img src="./img/example-menu/lunch4.png" alt="lunch menu" class="img-fluid">
-                    <img src="./img/example-menu/lunch5.png" alt="lunch menu" class="img-fluid">
-                    <img src="./img/example-menu/dinner.png" alt="dinner menu" class="img-fluid">
-                    <img src="./img/example-menu/dinner2.png" alt="dinner menu" class="img-fluid">
-                    <img src="./img/example-menu/dinner3.png" alt="dinner menu" class="img-fluid">
-                    <img src="./img/example-menu/primechaniya.png" alt="primechaniya" class="img-fluid">
-                    <button class="red_btn m-auto mt-5 mb-3">КУПИТЬ МЕНЮ</button>
+    <section id="oformlenie">
+        <div class="container">
+            <div class="row justify-content-between payment_method">
+                <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h2 class="d-flex align-items-center">
+                        <span>Оформление заказа</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="16" viewBox="0 0 56 16" fill="none">
+                            <path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="#102543"/>
+                        </svg>
+                        Оплата заказа
+                    </h2>
+                    <h6>Ваш заказ:</h6>
+                    <p>Марафон, пакет «Новичок»<span>2500 ₽</span></p>
+                    <h6>Выберите способ оплаты:</h6>
+                    <div class="d-flex pay_images">
+                        <a href="#">
+                            <img src="./img/payments/payment-method1.png" alt="payment">
+                            <p>Карта онлайн</p>
+                        </a>
+                        <a href="#">
+                            <img src="./img/payments/payment-method2.png" alt="payment">
+                            <p>Apple/Google Pay</p>
+                        </a>
+                        <a class="sberbank" href="#">
+                            <img src="./img/payments/payment-method3.png" alt="payment">
+                            <p>Перевод СберОнлайн</p>
+                        </a>
+                    </div>
+                    <h6>Воспользоваться промокодом:</h6>
+                    <form action="">
+                        <p>Промокод</p>
+                        <div class="d-flex align-items-center mt-1 mb-3">
+                            <div class="input_div">
+                                <input name="promocode" type="text" placeholder="Введите промокод">
+                            </div>
+                            <button type="submit">Применить</button>
+                        </div>
+                    </form>
+                    <h6>Воспользоваться бонусными баллами:</h6>
+                    <p class="pb-3">Вы можете оплататить покупку баллами</p>
+                    <p>Накопленно баллов: <span>200</span></p>
+                    <form action="">
+                        <p class="mt-4">Баллы</p>
+                        <div class="d-flex align-items-center mt-1 mb-1">
+                            <div class="input_div">
+                                <input name="promocode" type="text" placeholder="Сколько списать?">
+                            </div>
+                            <button type="submit">Применить</button>
+                        </div>
+                        <span>1 балл = 1 рубль</span>
+                    </form>
+                </div>
+                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="pay_block">
+                        <h5>ИТОГОВАЯ СУММА К ОПЛАТЕ:</h5>
+                        <h6>Ваш заказ:</h6>
+                        <p>Марафон, пакет «Новичок»</p>
+                        <div class="cost text-center my-3">2500 ₽ </div>
+                        <button>Оплатить</button>
+                        <div class="text-center">
+                            <a href="#">Выберите способ оплаты</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <footer class="position-relative">
         <img src="./img/footer-img1.png" alt="footer image" class="footer_img1 img-fluid position-absolute">
         <img src="./img/footer-img2.png" alt="footer image" class="footer_img2 img-fluid position-absolute">
@@ -136,4 +193,4 @@
     <script src="js/main.js"></script> 
 <!-- ens -->
 </body>
-</html>
+</html> -->

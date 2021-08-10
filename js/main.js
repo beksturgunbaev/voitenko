@@ -61,6 +61,7 @@ $(document).ready(function() {
         prevArrow: '<img class="prev_btn" src="img/arrow-left.png"/>',
         nextArrow: '<img class="next_btn" src="img/arrow-right.png"/>',
     });
+    
 // Mobile menu:
     $('.burger_menu').click(function() {
         $('.mobile_menu').toggleClass('active');
@@ -68,6 +69,15 @@ $(document).ready(function() {
         $('.line2').toggleClass('show');
         $('.line3').toggleClass('show');
         $('body').toggleClass('active');
+    });
+
+// Click на сбербанк:
+    $('.sberbank').click(function(e) {
+        e.preventDefault();
+        $('.whatsapp_modal').addClass('active');
+    });
+    $('.whatsapp_modal .close').click(function() {
+        $('.whatsapp_modal').removeClass('active');
     });
 });
 
@@ -118,3 +128,9 @@ if(mediaQueryTwo.matches) {
     document.querySelector('.sign_in a').innerText = 'Вход';
 }
 
+// Переход на страницу оплаты:
+let goPaymentBtn = document.querySelector('.go_payment_btn');
+
+goPaymentBtn.addEventListener('click', () => {
+    window.location = 'payment2.html';
+});

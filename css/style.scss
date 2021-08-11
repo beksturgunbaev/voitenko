@@ -1,6 +1,9 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
 
+html {
+    overflow-x: hidden !important;
+}
 body {
     &.active {
         overflow-y: hidden;
@@ -407,7 +410,18 @@ header {
             }
         }
     }
-    
+    .main_svg {
+        min-width: 500px;
+        height: 550px;
+        @include _992px() {
+            min-width: 330px;
+            height: 370px;
+        }
+        @include _360px() {
+            min-width: 270px;
+            height: 310px;
+        }
+    }
     .main_img {
         margin-left: -50px;
         @include _1400px() {
@@ -1250,7 +1264,7 @@ footer {
         }
         .training_img {
             position: absolute;
-            top: 0;
+            top: -60px;
             right: 0;
             @include _992px() {
                 top: auto;
@@ -1404,13 +1418,13 @@ footer {
                 @include _576px() {
                     min-height: auto;
                 }
-                img {
+                img, svg {
                     bottom: -48px;
                     right: -40px;
                     @include _576px() {
                         width: 20%;
                         right: -36px;
-                        bottom: -45px
+                        bottom: -49px
                     }
                 }
                 .grape_img2 {
@@ -1801,6 +1815,12 @@ footer {
             font-size: 24px !important;
         }
     }
+    .content_title {
+        @include _576px() {
+            padding: 5px 0 20px !important;
+            text-align: left !important;
+        }
+    }
     p {
         max-width: 484px;
     }
@@ -1831,6 +1851,12 @@ footer {
     }
 }
 .authorized_btns {
+    @include _767px() {
+        flex-direction: column;
+        button {
+            margin: 10px 0 !important;
+        }
+    }
     button {
         @include buttons(700, 20px !important, #fff, #102543, none, 40px, 250px !important, 68px !important, uppercase);
         margin: 20px;
@@ -1858,6 +1884,16 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+    @include _1200px() {
+        min-height: 320px;
+    }
+    @include _992px() {
+        margin: 20px auto;
+    }
+    @include _767px() {
+        padding-top: 20px !important;
+        min-height: 180px;
+    }
     img {
         position: absolute;
         top: 0;
@@ -1865,40 +1901,128 @@ footer {
     }
     .left_img {
         left: 0;
+        @include _1200px() {
+            width: 64%;
+        }
     }
     .right_img {
         right: 0;
+        @include _1200px() {
+            width: 64%;
+        }
+    }
+    .otchety_img {
+        @include _1200px() {
+            width: 40% !important;
+        }
+    }
+    .oclock_img {
+        right: 20%;
+        @include _1200px() {
+            display: none;
+        }
     }
     .container {
         position: relative;
         z-index: 1;
         h1 {
             @include title(900, 80px, 98px, #102543, uppercase);
+            @include _1400px() {
+                font-size: 60px;
+            }
+            @include _1200px() {
+                font-size: 40px;
+                line-height: 49px;
+                margin: 20px 0 40px;
+            }
+            @include _767px() {
+                font-size: 20px;
+                line-height: 24px;
+                margin: 10px 0 20px !important;
+            }
         }
         button {
             margin: 30px auto 20px !important;
+            @include _767px() {
+                font-size: 14px !important;
+                line-height: 130% !important;
+                width: 175px !important;
+                height: 40px !important;
+                margin: 0 auto !important;
+            }
         }
     }
 }
 .author_block4 { 
     img {
         top: auto !important;
+        @include _1200px() {
+            width: 34% !important;
+        }
+        @include _576px() {
+            top: 40px !important;
+            width: 32% !important;
+        }
     }
 }
 .authorized_about {
     padding-bottom: 30px;
+    .about_img1 {
+        @include _992px() {
+            display: block !important;
+        }
+        @include _767px() {
+            position: absolute;
+            top: -10px;
+            width: 38%;
+        }
+    }
+    .soc_links {
+        @include _576px() {
+            justify-content: center;
+        }
+    }
     h3 {
         font-size: 40px !important;
         padding-top: 20px;
+        @include _767px() {
+            font-size: 20px !important;
+            max-width: 222px;
+            text-align: center;
+            margin: 0 auto 10px;
+            margin-right: 20px;
+            margin-top: 40px !important; 
+        }
+        @include _576px() {
+            padding-top: 0;
+        }
+        @include _360px() {
+            margin-right: 0 !important;
+            margin-top: 20px !important;
+        }
     }
     p {
         font-size: 24px !important;
         margin-bottom: 30px !important;
         max-width: 720px !important;
+        @include _767px() {
+            font-size: 20px !important;
+            text-align: center !important;
+            padding-top: 10px !important;
+        }
+        @include _576px() {
+            padding-top: 40px !important;
+        }
+        @include _360px() {
+            padding-top: 30px !important;
+        }
     }
     ul {
         li {
             margin-right: 30px;
+            @include _576px() {
+                margin: 0 20px;
+            }
         }
     }
 }
@@ -1906,12 +2030,27 @@ footer {
     h3 {
         @include title(900, 40px, 120%, #102543, uppercase);
         margin-bottom: 70px;
+        @include _992px() {
+            font-size: 32px;
+        }
+        @include _576px() {
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 20px;
+        }
     }
     .author_blog {
         background-size: cover;
         background-position: bottom;
         background-repeat: no-repeat;
         min-height: 250px;
+        @include _992px() {
+            margin-top: 60px;
+            text-align: center;
+        }
+        @include _576px() {
+            margin-top: 40px;
+        }
         h2 {
             @include title(700, 40px, 49px, #102543, uppercase);
         }
@@ -1925,6 +2064,9 @@ footer {
             width: 200px !important; 
             height: 50px !important;
             font-size: 18px !important;
+            @include _767px() {
+                margin: 20px auto 0 !important;
+            }
         }
     }
     .author_blog1 {
@@ -1932,5 +2074,26 @@ footer {
     }
     .author_blog2 {
         background-image: url(../img/authorized/blog-bg2.png);
+    }
+}
+.authorized_button {
+    button {
+        font-size: 40px;
+        line-height: 49px;
+        max-width: 787px;
+        width: 100%;
+        min-height: 148px;
+        margin: 70px auto 0;
+        @include _992px() {
+            font-size: 28px;
+            line-height: 34px;
+        }
+        @include _576px() {
+            font-size: 16px;
+            line-height: 20px;
+            max-width: 100%;
+            min-height: 80px;
+            margin: 50px auto 0;
+        }
     }
 }

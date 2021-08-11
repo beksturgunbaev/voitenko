@@ -2097,3 +2097,146 @@ footer {
         }
     }
 }
+
+// Страница "Организационные моменты":
+#org_moments {
+    h1 {
+        @include title(900, 50px, 120%, #102543, uppercase);
+        span {
+            color: #EF5448;
+        }
+        @include _992px() {
+            font-size: 32px;
+            line-height: 42px;
+            text-align: left;
+        }
+        @include _576px() {
+            text-align: center;
+        }
+    }
+    .search {
+        max-width: 715px;
+        width: 100%;
+        min-height: 50px;
+        margin: 50px auto;
+        border: 1px solid #102543;
+        box-sizing: border-box;
+        border-radius: 50px;
+        padding: 4px 20px 4px 50px;
+        background-image: url(../img/org-moments/search.png);
+        background-position: 2% 50%;
+        background-repeat: no-repeat;
+        @include _576px() {
+            background-position: 3% 50%;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .org_block {
+        text-align: center;
+        h4 {
+            @include desc(700, 20px, 130%, #102543);
+            margin: 4px auto 0;
+            max-width: 220px;
+        }
+    }
+    p {
+        @include desc(400, 20px, 130%, #102543);
+        padding: 90px 0 30px;
+    }
+    .author_blog_div {
+        .pl_none {
+            @include _576px() {
+                padding-left: 0 !important;
+            }
+        }
+        p {
+            @include desc(600, 32px, 39px, #102543);
+            margin: 20px 0;
+            padding: 0;
+            @include _992px() {
+                font-size: 20px;
+                line-height: 24px;
+                margin: 7px 0;
+            }
+            @include _576px() {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+        a {
+            @include desc(400, 20px, 24px, #EF5448);
+            margin: 20px 0;
+            @include _992px() {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 7px 0;
+            }
+            @include _576px() {
+                position: absolute;
+                bottom: 30px;
+                left: 14px;
+            }
+            svg {
+                margin: 0 0 2px 5px;
+            }
+        }
+        .blog_datas {
+            @include _576px() {
+                a {
+                    position: relative;
+                    bottom: auto;
+                    left: auto;
+                }
+            }
+            @include _576px() {
+                margin-top: 30px;
+            }
+            span {
+                @include desc(500, 16px, 20px, #102543);
+                margin-left: 7px;
+            }
+            .extra {
+                margin-right: 20px;
+            }
+        }
+    }
+} 
+
+// Страница "Авторский блог (спасибо)":
+#blog_thanks {
+    h1 {
+        @include desc(900, 50px, 120%, #102543);
+        max-width: 680px;
+        margin: 0 auto 40px;
+        @include _992px() {
+            font-size: 40px;
+        }
+        @include _576px() {
+            font-size: 32px;
+        }
+    }
+    h6 {
+        @include desc(600, 20px, 130%, #102543);
+        margin: 20px 0;
+        @include _576px() {
+            font-size: 16px;
+        }
+    }
+    a {
+        @include desc(600, 24px, 130%, #008808);
+        text-decoration: underline;
+        @include _576px() {
+            font-size: 20px;
+        }
+    }
+    p {
+        @include desc(500, 20px, 130%, #102543);
+        margin: 30px auto 0;
+        max-width: 650px;
+        @include _576px() {
+            font-size: 16px;
+        }
+    }
+}

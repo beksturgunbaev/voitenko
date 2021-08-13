@@ -1216,6 +1216,10 @@ header .burger_menu .line3.show {
   margin: 40px 0;
 }
 
+#costs .all_in_one button:hover {
+  background: #EF5448;
+}
+
 @media (max-width: 576px) {
   #costs .all_in_one button {
     font-size: 14px;
@@ -1684,6 +1688,12 @@ footer {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  footer {
+    padding: 20px 0 10px;
+  }
+}
+
 footer .footer_img1 {
   bottom: 0;
   left: 0;
@@ -1725,6 +1735,13 @@ footer .left_block .privacy_policy {
 
 footer .left_block .privacy_policy:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  footer .left_block div:last-child {
+    line-height: 0;
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1776,6 +1793,14 @@ footer .footer_links a:last-child {
 @media (max-width: 1200px) {
   footer .footer_links a {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .footer_links a svg {
+    width: 36px !important;
+    height: 36px !important;
+    margin-top: 5px;
   }
 }
 
@@ -2645,7 +2670,8 @@ footer .footer_links a:last-child {
 
 @media (max-width: 767px) {
   #payment_success {
-    height: auto;
+    height: 90vh;
+    padding-top: 50px;
   }
 }
 
@@ -2673,11 +2699,6 @@ footer .footer_links a:last-child {
   font-weight: 500;
   font-size: 20px;
   line-height: 130%;
-  color: #102543;
-}
-
-#payment_success p a {
-  text-decoration: underline;
   color: #102543;
 }
 

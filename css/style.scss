@@ -843,6 +843,9 @@ header {
         button {
             @include buttons(700, 20px, #fff, #102543, none, 40px, 250px, 66px, none);
             margin: 40px 0;
+            &:hover {
+                background: #EF5448;
+            }
             @include _576px() {
                 font-size: 14px;
                 width: 175px;
@@ -1152,6 +1155,9 @@ footer {
     padding: 30px 0 10px;
     background: linear-gradient(89.29deg, #EE4747 0.45%, #F9C749 99.25%);
     overflow: hidden;
+    @include _767px() {
+        padding: 20px 0 10px;
+    }
     .footer_img1 {
         bottom: 0;
         left: 0;
@@ -1175,6 +1181,14 @@ footer {
             @include desc(500, 14px, 17px, #fff);
             &:hover {
                 text-decoration: underline;
+            }
+        }
+        div {
+            @include _576px() {
+                &:last-child {
+                    line-height: 0;
+                    padding-top: 10px;
+                }
             }
         }
     }
@@ -1209,6 +1223,13 @@ footer {
             }
             @include _1200px() {
                 margin-bottom: 10px;
+            }
+            svg {
+                @include _767px() {
+                    width: 36px !important;
+                    height: 36px !important;
+                    margin-top: 5px;
+                }
             }
         }
     }
@@ -1762,7 +1783,8 @@ footer {
 #payment_success {
     height: 70vh;
     @include _767px() {
-        height: auto;
+        height: 90vh;
+        padding-top: 50px;
     }
     h1 {
         @include desc(900, 50px, 120%, #102543);
@@ -1776,10 +1798,6 @@ footer {
     }
     p {
         @include desc(500, 20px, 130%, #102543);
-        a {
-            text-decoration: underline;
-            color: #102543;
-        }
     }
     .payment_success_btns {
         @include _576px() {

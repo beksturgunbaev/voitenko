@@ -68,7 +68,15 @@ $(document).ready(function() {
         $('.line1').toggleClass('show');
         $('.line2').toggleClass('show');
         $('.line3').toggleClass('show');
-        $('body').toggleClass('active');
+        $('html').toggleClass('active');
+    });
+
+    $('.burger_menu_personal').click(function() {
+        $('.mobile_menu').toggleClass('active');
+        $('.line1').toggleClass('show');
+        $('.line2').toggleClass('show');
+        $('.line3').toggleClass('show');
+        $('html').toggleClass('active');
     });
 
 // Click на сбербанк:
@@ -79,6 +87,33 @@ $(document).ready(function() {
     $('.whatsapp_modal .close').click(function() {
         $('.whatsapp_modal').removeClass('active');
     });
+
+// CLick to icon settings:
+    $('.settings_icon').click(function(e) {
+        $('.personal_menu').toggleClass('active');
+    });
+
+// Чекбоксы для страницы "Личный кабинет":
+    $('.personal_checkbox').click(function() {
+        $(this).toggleClass('active');
+    });
+
+// Input mask for telephone number:
+    $('.phone_field').inputmask("phone", {
+        placeholder: '#',
+        showMaskOnHover: false,
+    });
+        
+        Inputmask.extendAliases({
+        my_phone: {
+            alias: "abstractphone",
+            phoneCodes: [{
+            mask: "+7(###) ###-##-##",
+            }],
+        }
+    });
+    $('.phone_field').inputmask("my_phone");
+
 });
 
 
@@ -134,3 +169,15 @@ let goPaymentBtn = document.querySelector('.go_payment_btn');
 goPaymentBtn.addEventListener('click', () => {
     window.location = 'payment2.html';
 });
+
+// Кнопка для копирования ссылки:
+function copyLink() {
+    var copyText = document.querySelector(".copy_text");
+  
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+    document.execCommand("copy");
+  
+    alert('Ссылка скопирована!');
+  }

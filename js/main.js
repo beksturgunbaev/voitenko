@@ -93,11 +93,6 @@ $(document).ready(function() {
         $('.personal_menu').toggleClass('active');
     });
 
-// Чекбоксы для страницы "Личный кабинет":
-    $('.personal_checkbox').click(function() {
-        $(this).toggleClass('active');
-    });
-
 // Input mask for telephone number:
     $('.phone_field').inputmask("phone", {
         placeholder: '#',

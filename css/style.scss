@@ -1494,6 +1494,7 @@ header {
     .breakfast {
         img {
             margin: 10px auto;
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px
         }
     }
 }
@@ -2215,7 +2216,7 @@ header {
 
 // Страница "Личный кабинет":
 #personal_room {
-    padding: 0 0 40px;
+    padding: 0 0 90px;
     .personal_main {
         z-index: 1;
         .personal_img {
@@ -2323,6 +2324,35 @@ header {
                         outline: none;
                     }
                 }
+                textarea {
+                    border: 1px solid #D8D8D8;
+                    border-radius: 3px;
+                    background: transparent;
+                    padding: 10px;
+                    width: 100%;
+                    resize: none;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                button {
+                    @include buttons(700, 16px, #fff, #EF5448, none, 3px, 190px, 40px, none);
+                    &:hover {
+                        background: #102543;
+                    }
+                }
+                .privacy {
+                    @include desc(400, 12px, 15px, #102543);
+                    text-align: left;
+                    max-width: 314px;
+                    a {
+                        font-weight: 500;
+                        color: #102543;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
                 .mini_inputs {
                     div {
                         &:first-child {
@@ -2338,6 +2368,20 @@ header {
                 .checkbox_div {
                     input {
                         opacity: 0;
+                        height: 24px;
+                        margin-left: -12px;
+                        &:checked + label {
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 7px;
+                                left: 2px;
+                                width: 10px;
+                                height: 10px;
+                                background: #102543;
+                                border-radius: 1px;
+                            }
+                        }
                     }
                     label {
                         position: relative;
@@ -2351,18 +2395,6 @@ header {
                             height: 24px;
                             border: 1px solid #D8D8D8;
                             border-radius: 3px;
-                        }
-                        &.active {
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                top: 7px;
-                                left: 2px;
-                                width: 10px;
-                                height: 10px;
-                                background: #102543;
-                                border-radius: 1px;
-                            }
                         }
                     }
                 }

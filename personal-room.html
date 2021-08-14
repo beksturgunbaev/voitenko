@@ -118,34 +118,64 @@
                     <div class="personal_container row justify-content-between">
                         <div class="col-xl-4">
                             <h6>Введите Ваши данные:</h6>
-                            <div class="mini_inputs d-flex align-items-center">
-                                <div>
-                                    <p>Вес сегодня утром, кг</p>
-                                    <input class="w-100" type="text">
-                                </div>
-                                <div>
-                                    <p>Месячные сегодня</p>
-                                    <select class="w-100" name="" id="">
-                                        <option value="Нет">Нет</option>
-                                        <option value="Да">Да</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <p>Активность</p>
-                                <input class="w-100" type="text">
-                            </div>
-                            <div class="mt-3">
-                                <p>Алкоголь вчера</p>
-                                <div class="checkbox_div d-flex">
+                            <form action="">
+                                <div class="mini_inputs d-flex align-items-center">
                                     <div>
-                                        <input checked id="yes" type="checkbox">
-                                        <label class="active personal_checkbox" for="yes">Да</label>
+                                        <p>Вес сегодня утром, кг</p>
+                                        <input name="weight" class="w-100" type="text">
                                     </div>
                                     <div>
-                                        <input id="no" type="checkbox">
-                                        <label class="personal_checkbox" for="no">Нет</label>
+                                        <p>Месячные сегодня</p>
+                                        <select class="w-100" name="" id="">
+                                            <option value="Нет">Нет</option>
+                                            <option value="Да">Да</option>
+                                        </select>
                                     </div>
+                                </div>
+                                <div class="mt-3">
+                                    <p>Активность</p>
+                                    <input name="activity" class="w-100" type="text">
+                                </div>
+                                <div class="mt-3">
+                                    <p>Алкоголь вчера</p>
+                                    <div class="checkbox_div d-flex">
+                                        <div>
+                                            <input name="yes_no" checked id="yes" type="radio">
+                                            <label for="yes">Да</label>
+                                        </div>
+                                        <div>
+                                            <input name="yes_no" id="no" type="radio">
+                                            <label for="no">Нет</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <input class="w-100" type="text" placeholder="Какой алкоголь был вчера и сколько?">
+                                </div>
+                                <div class="mt-3">
+                                    <div class="checkbox_div d-flex">
+                                        <div>
+                                            <input name="chitmil_sryv" checked id="yes_2" type="radio">
+                                            <label for="yes_2">Читмил</label>
+                                        </div>
+                                        <div>
+                                            <input name="chitmil_sryv" id="no_2" type="radio">
+                                            <label for="no_2">Срыв</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="mt-4">
+                                <p>Как прошёл Ваш день вчера?</p>
+                                <textarea name="" id="" cols="30" rows="5" maxlength="255"></textarea>
+                            </div>
+                            <div class="mt-4">
+                                <button type="submit">Отправить отчёт</button>
+                            </div>
+                            <div class="mt-3">
+                                <div class="privacy">
+                                    Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                    <a href="#">политикой конфиденциальности</a>
                                 </div>
                             </div>
                         </div>

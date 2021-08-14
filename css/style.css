@@ -2209,6 +2209,8 @@ header .burger_menu_personal .line3.show {
 
 #example_menu .breakfast img {
   margin: 10px auto;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
 #oformlenie h2 {
@@ -3351,7 +3353,7 @@ header .burger_menu_personal .line3.show {
 }
 
 #personal_room {
-  padding: 0 0 40px;
+  padding: 0 0 90px;
 }
 
 #personal_room .personal_main {
@@ -3518,6 +3520,64 @@ header .burger_menu_personal .line3.show {
   outline: none;
 }
 
+#personal_room .personal_main .categories_block .personal_container textarea {
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  background: transparent;
+  padding: 10px;
+  width: 100%;
+  resize: none;
+}
+
+#personal_room .personal_main .categories_block .personal_container textarea:focus {
+  outline: none;
+}
+
+#personal_room .personal_main .categories_block .personal_container button {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background: #EF5448;
+  border: none;
+  border-radius: 3px;
+  width: 190px;
+  height: 40px;
+  text-transform: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#personal_room .personal_main .categories_block .personal_container button:hover {
+  background: #102543;
+}
+
+#personal_room .personal_main .categories_block .personal_container .privacy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #102543;
+  text-align: left;
+  max-width: 314px;
+}
+
+#personal_room .personal_main .categories_block .personal_container .privacy a {
+  font-weight: 500;
+  color: #102543;
+}
+
+#personal_room .personal_main .categories_block .personal_container .privacy a:hover {
+  text-decoration: underline;
+}
+
 #personal_room .personal_main .categories_block .personal_container .mini_inputs div:first-child {
   margin-right: 7px;
   width: 100%;
@@ -3530,6 +3590,19 @@ header .burger_menu_personal .line3.show {
 
 #personal_room .personal_main .categories_block .personal_container .checkbox_div input {
   opacity: 0;
+  height: 24px;
+  margin-left: -12px;
+}
+
+#personal_room .personal_main .categories_block .personal_container .checkbox_div input:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background: #102543;
+  border-radius: 1px;
 }
 
 #personal_room .personal_main .categories_block .personal_container .checkbox_div label {
@@ -3546,17 +3619,6 @@ header .burger_menu_personal .line3.show {
   height: 24px;
   border: 1px solid #D8D8D8;
   border-radius: 3px;
-}
-
-#personal_room .personal_main .categories_block .personal_container .checkbox_div label.active::after {
-  content: '';
-  position: absolute;
-  top: 7px;
-  left: 2px;
-  width: 10px;
-  height: 10px;
-  background: #102543;
-  border-radius: 1px;
 }
 
 footer {

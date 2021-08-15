@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/libs/slick.css">
     <link rel="stylesheet" href="css/libs/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Личный кабинет</title>
+    <title>Мом тренировки</title>
 </head>
 <body>
     <header class="authorized_header">
@@ -73,7 +73,7 @@
             <p class="marafon_date">Сегодня 2 день <br/>марафона июля</p>
         </div>
     </header>
-    <section id="personal_room" class="personal_room">
+    <section id="personal_room">
         <div class="container">
             <div class="personal_main text-center position-relative">
                 <img src="./img/personal-room/back.png" alt="personal room's background image" class="img-fluid personal_img">
@@ -96,7 +96,7 @@
                         </svg>
                         МОЁ МЕНЮ
                     </a></li>
-                    <li><a href="./my-trainings.html">
+                    <li><a class="active" href="./my-trainings.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M3.83333 4.46667V11.5417H7.23333L7.73333 10.7833C8.7 9.29167 10.4417 8.625 11.725 8.625C12.1667 8.625 12.5417 8.7 12.825 8.83333C13.5833 9.175 13.7917 9.81667 13.8333 10.2833C13.9 11.225 13.4167 12.1917 12.5833 12.7583C11.8333 13.275 10.0333 13.8333 7.89167 13.8333C6.43333 13.8333 4.34167 13.575 2.26667 12.4167C2.50833 10.375 3 7.06667 3.83333 4.46667ZM3.83333 0.5C1.33333 3.90833 0.5 13.2833 0.5 13.2833C2.91667 14.925 5.56667 15.5 7.89167 15.5C10.3833 15.5 12.4917 14.8417 13.5333 14.1333C16.0333 12.4333 16.2833 8.59167 13.5333 7.31667C13 7.075 12.3833 6.95833 11.725 6.95833C9.80833 6.95833 7.58333 7.96667 6.33333 9.875H5.5V3.90833H7.16667L8 1.33333L3.83333 0.5Z" fill="#102543"/>
                         </svg>
@@ -115,6 +115,13 @@
                         ЛИЧНЫЕ ДАННЫЕ
                     </a></li>
                 </ul>
+                <div class="categories_block my_trainings">
+                    <h5 class="pt-5 text-center">Раздел тренировки будет доступен 3 числа
+                        <br/><br/>
+                        Все инфопродукты вы можете посмотреть в нашем интернет-магазине
+                    </h5>
+                    <button type="submit" onclick="goOnlineShop();">Перейти в магазин</button>
+                </div>
             </div>
         </div>
     </section>
@@ -173,23 +180,7 @@
             </div>
         </div>
     </footer>
-
 <!-- Scripts -->
-    <script>
-        // Расчитать количество символов textarea:
-        function textareaLengthCheck() {
-            var textArea = document.getElementById('textarea_field').value.length;
-            var charactersLeft = 0 + textArea;
-            var count = document.getElementById('text_counter');
-            count.innerHTML = charactersLeft;
-        }
-
-        let textareaField = document.getElementById('textarea_field');
-
-        textareaField.addEventListener('keyup', textareaLengthCheck, false);
-        textareaField.addEventListener('keydown', textareaLengthCheck, false);
-    </script>
-
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/slick.min.js"></script>   
     <script src="js/main.js"></script> 

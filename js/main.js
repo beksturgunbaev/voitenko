@@ -88,6 +88,12 @@ $(document).ready(function() {
         $('.whatsapp_modal').removeClass('active');
     });
 
+// Калькулятор замен продуктов:
+    $('.product_img').click(function() {
+        $('.product_img').removeClass('active');
+        $(this).addClass('active');
+    });
+
 // CLick to icon settings:
     $('.settings_icon').click(function(e) {
         $('.personal_menu').toggleClass('active');
@@ -108,7 +114,6 @@ $(document).ready(function() {
         }
     });
     $('.phone_field').inputmask("my_phone");
-
 });
 
 
@@ -158,13 +163,6 @@ if(mediaQueryTwo.matches) {
     document.querySelector('.sign_in a').innerText = 'Вход';
 }
 
-// Переход на страницу оплаты:
-let goPaymentBtn = document.querySelector('.go_payment_btn');
-
-goPaymentBtn.addEventListener('click', () => {
-    window.location = 'payment2.html';
-});
-
 // Кнопка для копирования ссылки:
 function copyLink() {
     var copyText = document.querySelector(".copy_text");
@@ -175,4 +173,19 @@ function copyLink() {
     document.execCommand("copy");
   
     alert('Ссылка скопирована!');
-  }
+}
+
+// Переход на страницу "Новый расчет":
+function goNewCalc() {
+    window.location = 'replacement-products.html';
+}
+
+// Переход на страницу "Результат замены":
+function goResult() {
+    window.location = 'replacement-results.html';
+}
+
+// Переход на страницу Магазин:
+function goOnlineShop() {
+    window.location = 'online-shop.html';
+}

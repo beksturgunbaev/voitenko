@@ -83,6 +83,9 @@ a {
 @mixin _576px {
     @media (max-width: 576px) { @content; }
 }
+@mixin _400px {
+    @media (max-width: 400px) { @content; }
+}
 @mixin _360px {
     @media (max-width: 360px) { @content; }
 }
@@ -156,8 +159,21 @@ section {
 // ========================================= Главная страинца:
 header {
     padding: 30px 0;
+    @include _1200px() {
+        padding: 16px 0;
+    }
     .extra_cl {
         min-height: 33px;
+    }
+    .marafon_date {
+        @include desc(400, 16px, 20px, #EF5448);
+        margin-top: 10px;
+        @include _992px() {
+            margin-top: 24px;
+            br {
+                display: none;
+            }
+        }
     }
     .logo {
         a {
@@ -171,10 +187,6 @@ header {
                 font-size: 20px;
                 line-height: 24px;
             }
-        }
-        p {
-            @include desc(400, 16px, 20px, #EF5448);
-            margin-top: 10px;
         }
     }
     .mobile_menu {
@@ -202,6 +214,9 @@ header {
         .settings_icon {
             margin-left: 16px;
             cursor: pointer;
+            @include _1200px() {
+                display: none;
+            }
         }
         .menu {
             @include _1200px() {
@@ -264,6 +279,11 @@ header {
                 @include _1200px() {
                     border: none;
                 }
+            }
+        }
+        .personal_author {
+            @include _1200px() {
+                display: none !important;
             }
         }
     }
@@ -348,10 +368,32 @@ header {
         opacity: 0;
         transition: .3s;
         transform: translate(0, 10px);
+        @include _1200px() {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(0, 0);
+            position: inherit;
+            top: auto;
+            right: auto;
+            max-width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+        }
         &.active {
             visibility: visible;
             opacity: 1;
             transform: translate(0, 0);
+        }
+        #mobile__menu {
+            display: none !important;
+            @include _1200px() {
+                display: block !important;
+            }
+        }
+        .hidden_menu {
+            @include _1200px() {
+                display: none !important;
+            }
         }
         li {
             margin: 10px 0;
@@ -2217,6 +2259,9 @@ header {
 // Страница "Личный кабинет":
 #personal_room {
     padding: 0 0 90px;
+    @include _767px() {
+        padding: 30px 0;
+    }
     .personal_main {
         z-index: 1;
         .personal_img {
@@ -2229,12 +2274,27 @@ header {
         }
         h1 {
             @include title(900, 80px, 98px, #102543, uppercase);
+            @include _992px() {
+                font-size: 60px;
+                line-height: 73px;
+            }
+            @include _576px() {
+                font-size: 32px;
+                line-height: 39px;
+            }
         }
         p {
             @include desc(700, 24px, 29px, #102543);
             margin: 10px 0 30px;
+            @include _576px() {
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
         .copy_container {
+            @include _576px() {
+                flex-direction: column;
+            }
             input {
                 @include desc(400, 16px, 20px, #102543);
                 max-width: 440px;
@@ -2246,13 +2306,14 @@ header {
                 align-items: center;
                 margin: 0;
                 padding: 7px 20px;
+                background: transparent;
                 &:focus {
                     outline: none;
                 }
             }
             button {
                 @include desc(700, 16px, 20px, #fff);
-                max-width: 170px;
+                max-width: 174px;
                 width: 100%;
                 margin-left: 16px;
                 min-height: 50px;
@@ -2263,6 +2324,9 @@ header {
                 &:hover {
                     background: #102543;
                 }
+                @include _576px() {
+                    margin-top: 14px;
+                }
             }
         }
         .categories {
@@ -2270,6 +2334,9 @@ header {
             align-items: center;
             justify-content: space-between;
             margin: 40px 0;
+            @include _1200px() {
+                display: none !important;
+            }
             li {
                 a { 
                     @include desc(700, 16px, 20px, #102543);
@@ -2278,6 +2345,20 @@ header {
                     align-items: center;
                     width: 248px;
                     height: 80px;
+                    &:hover {
+                        background: linear-gradient(90deg, #EE4747 0%, #F9C749 100%);
+                        color: #fff;
+                        svg {
+                            path {
+                                fill: #fff;
+                            }
+                        }
+                    }
+                    @include _1399px() {
+                        font-size: 14px;
+                        width: 222px;
+                        height: 60px;
+                    }
                     svg {
                         margin: 0 10px 1px 0;
                     }
@@ -2298,9 +2379,82 @@ header {
                 @include desc(700, 24px, 29px, #102543);
                 margin: 30px 0 40px;
                 text-align: left;
+                @include _576px() {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
             }
             table {
                 border-color: #102543;
+                th {
+                    @include desc(400, 24px, 29px, #102543);
+                    @include _1200px() {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    @include _992px() {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    @include _767px() {
+                        font-size: 9px;
+                        line-height: 11px;
+                        padding: 3px 1px;
+                        vertical-align: top;
+                    }
+                }
+                td {
+                    @include desc(400, 16px, 20px, #102543);
+                    @include _992px() {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    @include _767px() {
+                        font-size: 9px;
+                        line-height: 11px;
+                        padding: 5px 1px;
+                        vertical-align: top;
+                    }
+                }
+            }
+            .measurements-table {
+                th {
+                    @include desc(400, 18px, 22px, #102543);
+                    @include _1200px() {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+                td {
+                    @include desc(400, 14px, 17px, #102543);
+                    @include _1200px() {
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                }
+                @include _576px() {
+                    display: none !important;
+                }
+            }
+            .mobile_table {
+                display: none;
+                @include _576px() {
+                    display: block !important;
+                }
+                td {
+                    @include _576px() {
+                        font-size: 9px;
+                        line-height: 11px;
+                        width: 1%;
+                    }
+                }
+                th {
+                    @include _576px() {
+                        font-size: 9px;
+                        line-height: 11px;
+                        width: 1%;
+                    }
+                }
             }
             .personal_container {
                 h6 {
@@ -2335,6 +2489,15 @@ header {
                         outline: none;
                     }
                 }
+                .counter {
+                    @include desc(400, 12px, 130%, #848199);
+                    padding: 9px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 1px;
+                    background: #fff;
+                    z-index: 1;
+                }
                 button {
                     @include buttons(700, 16px, #fff, #EF5448, none, 3px, 190px, 40px, none);
                     &:hover {
@@ -2354,14 +2517,34 @@ header {
                     }
                 }
                 .mini_inputs {
+                    @include _576px() {
+                        flex-direction: column;
+                        width: 70%;
+                    }
                     div {
                         &:first-child {
                             margin-right: 7px;
                             width: 100%;
+                            @include _576px() {
+                                margin-right: 0;
+                            }
                         }
                         &:last-child {
                             margin-left: 7px;
                             width: 100%;
+                            @include _576px() {
+                                margin-left: 0;
+                                margin-top: 14px;
+                            }
+                        }
+                    }
+                    .last_input {
+                        max-width: 201px;
+                        @include _767px() {
+                            max-width: 251px;
+                        }
+                        @include _576px() {
+                            max-width: 100%;
                         }
                     }
                 }
@@ -2399,7 +2582,259 @@ header {
                     }
                 }
             }
+            .products_block {
+                max-width: 760px;
+                width: 100%;
+                border: 1px solid #D8D8D8;
+                border-radius: 3px;
+                padding: 40px 103px;
+                margin: 50px auto 0;
+                @include _992px() {
+                    padding: 40px 60px;
+                }
+                @include _767px() {
+                    padding: 25px;
+                }
+                @include _576px() {
+                    padding: 20px;
+                }
+                @include _360px() {
+                    padding: 20px 1px;
+                }
+                form {
+                    .product_img {
+                        width: 90px;
+                        height: 90px;
+                        margin: 0 10px;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 3px;
+                        padding: 5px;
+                        cursor: pointer;
+                        &.active {
+                            border: 1px solid #EF5448;
+                        }
+                        @include _576px() {
+                            width: auto;
+                            height: auto;
+                            margin: 0 5px;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    p {
+                        @include desc(400, 16px, 20px, #102543);
+                        text-align: left;
+                        padding-left: 10px;
+                        @include _767px() {
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+                        @include _576px() {
+                            font-size: 9px;
+                            line-height: 11px;
+                            margin: 10px 0;
+                            height: 22px;
+                        }
+                    }
+                    select,
+                    input {
+                        @include desc(500, 16px, 130%, #102543);
+                        width: 92%;
+                        margin: 5px 0;
+                        height: 40px;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 3px;
+                        background: transparent;
+                        padding: 0 10px;
+                        &:focus {
+                            outline: none;
+                        }
+                        @include _576px() {
+                            font-size: 12px;
+                            height: 26px;
+                            padding: 0 5px;
+                        }
+                    }
+                    input::placeholder {
+                        font-weight: 400;
+                        color: #848199;
+                    }
+                    button {
+                        @include buttons(700, 16px, #fff, #EF5448, none, 3px, 190px, 40px, none);
+                        margin: 50px auto 0;
+                        transition: .3s;
+                        &:hover {
+                            background: #102543;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                        @include _576px() {
+                            margin-top: 20px;
+                        }
+                    }
+                    .results {
+                        max-width: 310px;
+                        margin:  0 auto;
+                        padding: 60px 0;
+                        @include _360px() {
+                            max-width: 280px;
+                        }
+                        h6 {
+                            @include desc(500, 20px, 130%, #102543);
+                            text-align: left;
+                            margin: 7px 0;
+                            @include _360px() {
+                                font-size: 18px;
+                            }
+                            span {
+                                color: #fff;
+                                padding: 3px 9px;
+                                background: #102543;
+                            }
+                        }
+                    }
+                }
+            }
         }
+        .measurements_block {
+            .measurements_link {
+                @include buttons(700, 16px, #fff, #102543, none, 3px, 260px, 50px, none);
+                margin-bottom: 40px;
+                @include _1200px() {
+                    margin: 40px 0;
+                }
+                &:hover {
+                    background: #EF5448;
+                }
+            }
+            form {
+                input {
+                    &::placeholder {
+                        color: #BFBFBF;
+                    }
+                }
+            }
+            .right_block {
+                @include _576px() {
+                    position: relative;
+                    padding-top: 80px;
+                }
+                .how_to_do {
+                    @include _576px() {
+                        position: absolute;
+                        top: 0;
+                    }
+                    a {
+                        @include desc(700, 18px, 22px, #EF5448);
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .woman_body {
+                margin-bottom: 20px;
+                .d-flex {
+                    max-width: 230px;
+                    margin: 20px 0;
+                    @include _767px() {
+                        margin: 10px 0;
+                    }
+                    span {
+                        min-width: 70px;
+                        min-height: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 10px;
+                        background: #102543; 
+                        border-radius: 50%;
+                        @include desc(700, 16px, 20px, #fff);
+                        @include _767px() {
+                            font-size: 14px;
+                            line-height: 17px;
+                            min-width: 50px;
+                            min-height: 50px;
+                        }
+                        @include _400px() {
+                            font-size: 12px;
+                            line-height: 15px;
+                            min-width: 40px;
+                            min-height: 40px;                        
+                        }
+                    }
+                    p {
+                        @include desc(500, 18px, 22px, #102543);
+                        text-align: left;
+                        margin: 0;
+                        @include _767px() {
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                        @include _400px() {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                    }
+                }
+                .woman_img {
+                    margin: 0 30px;
+                    @include _360px() {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+        .my_trainings {
+            button {
+                @include buttons(700, 16px, #fff, #EF5448, none, 3px, 200px, 60px, none);
+                margin: 90px auto 0;
+                transition: .3s;
+                &:hover {
+                    background: #102543;
+                }
+                &:focus {
+                    outline: none;
+                }
+                @include _576px() {
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        .daily_reports {
+            .personal_container {
+                .daily_desc {
+                    max-width: 490px;
+                }
+            }
+        }
+    }
+    .my_menu_block {
+        text-align: center;
+        margin-top: 24px;
+        a {
+            &:hover {
+                p {
+                    text-decoration: underline;
+                }
+            }
+            p {
+                @include desc(400, 16px, 20px, #102543);
+                margin: 7px 0;
+            }
+        }
+    }
+}
+.personal_room {
+    @include _1200px() {
+        padding: 100px 0 40px !important;
+        height: 80vh !important;
     }
 }
 

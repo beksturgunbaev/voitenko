@@ -27,7 +27,7 @@
                                 <a href="#">Изменить пароль</a>
                             </li>
                             <li>
-                                <a href="./daily-report.html">Ежедневный отчёт</a>
+                                <a href="./personal-room.html">Ежедневный отчёт</a>
                             </li>
                             <li>
                                 <a href="./my-menu.html">Моё меню</a>
@@ -73,7 +73,7 @@
             <p class="marafon_date">Сегодня 2 день <br/>марафона июля</p>
         </div>
     </header>
-    <section id="personal_room" class="personal_room">
+    <section id="personal_room">
         <div class="container">
             <div class="personal_main text-center position-relative">
                 <img src="./img/personal-room/back.png" alt="personal room's background image" class="img-fluid personal_img">
@@ -84,9 +84,9 @@
                     <button onclick="copyLink();">Скопировать</button>
                 </div>
                 <ul class="categories">
-                    <li><a href="./daily-report.html">
+                    <li><a class="active" href="./daily-report.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
-                            <path d="M13.8333 15.833H2.16667V6.66634H13.8333V15.833ZM13.8333 2.49967H13V0.833008H11.3333V2.49967H4.66667V0.833008H3V2.49967H2.16667C1.72464 2.49967 1.30072 2.67527 0.988155 2.98783C0.675595 3.30039 0.5 3.72431 0.5 4.16634V15.833C0.5 16.275 0.675595 16.699 0.988155 17.0115C1.30072 17.3241 1.72464 17.4997 2.16667 17.4997H13.8333C14.2754 17.4997 14.6993 17.3241 15.0118 17.0115C15.3244 16.699 15.5 16.275 15.5 15.833V4.16634C15.5 3.72431 15.3244 3.30039 15.0118 2.98783C14.6993 2.67527 14.2754 2.49967 13.8333 2.49967ZM11.775 9.21634L10.8917 8.33301L6.825 12.3997L5.05833 10.633L4.175 11.5163L6.825 14.1663L11.775 9.21634Z" fill="#102543"/>
+                            <path d="M13.8333 15.833H2.16667V6.66634H13.8333V15.833ZM13.8333 2.49967H13V0.833008H11.3333V2.49967H4.66667V0.833008H3V2.49967H2.16667C1.72464 2.49967 1.30072 2.67527 0.988155 2.98783C0.675595 3.30039 0.5 3.72431 0.5 4.16634V15.833C0.5 16.275 0.675595 16.699 0.988155 17.0115C1.30072 17.3241 1.72464 17.4997 2.16667 17.4997H13.8333C14.2754 17.4997 14.6993 17.3241 15.0118 17.0115C15.3244 16.699 15.5 16.275 15.5 15.833V4.16634C15.5 3.72431 15.3244 3.30039 15.0118 2.98783C14.6993 2.67527 14.2754 2.49967 13.8333 2.49967ZM11.775 9.21634L10.8917 8.33301L6.825 12.3997L5.05833 10.633L4.175 11.5163L6.825 14.1663L11.775 9.21634Z" fill="102543"/>
                         </svg>
                         ЕЖЕДНЕВНЫЙ ОТЧЁТ
                     </a></li>
@@ -115,6 +115,111 @@
                         ЛИЧНЫЕ ДАННЫЕ
                     </a></li>
                 </ul>
+                <div class="daily_reports categories_block">
+                    <h5>Июль 2021</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>День</th>
+                                <th>Активность</th>
+                                <th>Алко.</th>
+                                <th>Мес.</th>
+                                <th>Вес</th>
+                                <th>Как прошёл ваш день</th>
+                                <th>Комментарий по отчёту</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Активность</td>
+                                <td>Нет</td>
+                                <td>Нет</td>
+                                <td>59</td>
+                                <td>Как прошёл ваш день</td>
+                                <td>Комментарий по отчёту</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="personal_container row justify-content-between">
+                        <div class="col-xl-4 col-lg-5 col-md-6">
+                            <h6>Введите Ваши данные:</h6>
+                            <form action="">
+                                <div class="mini_inputs d-flex align-items-center">
+                                    <div>
+                                        <p>Вес сегодня утром, кг</p>
+                                        <input name="weight" class="w-100" type="text">
+                                    </div>
+                                    <div>
+                                        <p>Месячные сегодня</p>
+                                        <select class="w-100" name="" id="">
+                                            <option value="Нет">Нет</option>
+                                            <option value="Да">Да</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <p>Активность</p>
+                                    <input name="activity" class="w-100" type="text">
+                                </div>
+                                <div class="mt-3">
+                                    <p>Алкоголь вчера</p>
+                                    <div class="checkbox_div d-flex">
+                                        <div>
+                                            <input name="yes_no" checked id="yes" type="radio">
+                                            <label for="yes">Да</label>
+                                        </div>
+                                        <div>
+                                            <input name="yes_no" id="no" type="radio">
+                                            <label for="no">Нет</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <input class="w-100" type="text" placeholder="Какой алкоголь был вчера и сколько?">
+                                </div>
+                                <div class="mt-3">
+                                    <div class="checkbox_div d-flex">
+                                        <div>
+                                            <input name="chitmil_sryv" checked id="yes_2" type="radio">
+                                            <label for="yes_2">Читмил</label>
+                                        </div>
+                                        <div>
+                                            <input name="chitmil_sryv" id="no_2" type="radio">
+                                            <label for="no_2">Срыв</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <p>Как прошёл Ваш день вчера?</p>
+                                    <div class="position-relative">
+                                        <textarea id="textarea_field" rows="5" maxlength="255"></textarea>
+                                        <p class="counter">Введено символов: <span id="text_counter">0</span>/255</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button type="submit">Отправить отчёт</button>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="privacy">
+                                        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+                                        <a href="#">политикой конфиденциальности</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xl-6 col-lg-7 col-md-6">
+                            <h6 class="pb-3">При заполнении отчёта соблюдаем три простых правила:</h6>
+                            <p class="daily_desc"><strong>Пунктуальность</strong> — отчёт нужно заполнять каждый день (c 00:00 до 23:59 текущего дня, (GMT+07:00) Новосибирск). Проснулись, умылись, встали на весы — отправили отчёт.
+                                <br/><br/>
+                                <strong>Честность</strong> — вносите данные как есть, нет смысла делать этот отчёт «красивым», внося недостоверную информацию. Этим вы вводите в заблуждение в первую очередь себя. Если у вас сегодня нет возможности взвеситься — ставьте 0
+                                <br/><br/>
+                                <strong>Краткость</strong> — пишите кратко, нет необходимости уточнять, какие конкретно упражнения вы делали в зале и сколько сортов крафтового пива попробовали вчера. «Бег 3км», «Вино 200гр» вполне достаточно.
+                                Pаздел «Как прошёл ваш день вчера?» - исключение, здесь в 4–5 предложениях опишите ваш день.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -73,7 +73,7 @@
             <p class="marafon_date">Сегодня 2 день <br/>марафона июля</p>
         </div>
     </header>
-    <section id="personal_room" class="personal_room">
+    <section id="personal_room">
         <div class="container">
             <div class="personal_main text-center position-relative">
                 <img src="./img/personal-room/back.png" alt="personal room's background image" class="img-fluid personal_img">
@@ -90,7 +90,7 @@
                         </svg>
                         ЕЖЕДНЕВНЫЙ ОТЧЁТ
                     </a></li>
-                    <li><a href="./my-menu.html">
+                    <li><a class="active" href="./my-menu.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M2.16667 0.5C1.24167 0.5 0.5 1.24167 0.5 2.16667V13.8333C0.5 14.7583 1.24167 15.5 2.16667 15.5H13.8333C14.7583 15.5 15.5 14.7583 15.5 13.8333V2.16667C15.5 1.24167 14.7583 0.5 13.8333 0.5H2.16667ZM2.16667 2.16667H13.8333V13.8333H2.16667V2.16667ZM3.83333 3.83333V5.5H12.1667V3.83333H3.83333ZM3.83333 7.16667V8.83333H12.1667V7.16667H3.83333ZM3.83333 10.5V12.1667H9.66667V10.5H3.83333Z" fill="#102543"/>
                         </svg>
@@ -115,6 +115,59 @@
                         ЛИЧНЫЕ ДАННЫЕ
                     </a></li>
                 </ul>
+                <div class="categories_block">
+                    <h5 class="pt-3">Калькулятор замен продуктов</h5>
+                    <div class="products_block">
+                        <form action="">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="product_img active">
+                                    <img src="./img/my-menu/meat.png" alt="meat" class="img-fluid">
+                                </div>
+                                <div class="product_img">
+                                    <img src="./img/my-menu/fish.png" alt="meat" class="img-fluid">
+                                </div>
+                                <div class="product_img">
+                                    <img src="./img/my-menu/grain.png" alt="meat" class="img-fluid">
+                                </div>
+                                <div class="product_img">
+                                    <img src="./img/my-menu/milk.png" alt="meat" class="img-fluid">
+                                </div>
+                                <div class="product_img">
+                                    <img src="./img/my-menu/cheese.png" alt="meat" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <div class="w-50">
+                                    <p>Выберите мясо, указанное в рецепте и укажите вес в гр</p>
+                                    <div class="text-left">
+                                        <select name="" id="" required>
+                                            <option value="Курица">Курица</option>
+                                            <option value="Курица2">Курица2</option>
+                                            <option value="Курица3">Курица3</option>
+                                        </select>
+                                    </div>
+                                    <div class="text-left">
+                                        <input type="text" placeholder="0 гр" required>
+                                    </div>
+                                </div>
+                                <div class="w-50">
+                                    <p>Выберите мясо, на которое хотите поменять</p>
+                                    <div>
+                                        <select name="" id="" required>
+                                            <option value="Говядина постная">Говядина постная</option>
+                                            <option value="Говядина постная2">Говядина постная2</option>
+                                            <option value="Говядина постная3">Говядина постная3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" onclick="goResult();">Рассчитать</button>
+                        </form>
+                    </div>
+                    <div class="mt-5">
+                        <img src="./img/my-menu/menu.jpg" alt="menu" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -175,21 +228,6 @@
     </footer>
 
 <!-- Scripts -->
-    <script>
-        // Расчитать количество символов textarea:
-        function textareaLengthCheck() {
-            var textArea = document.getElementById('textarea_field').value.length;
-            var charactersLeft = 0 + textArea;
-            var count = document.getElementById('text_counter');
-            count.innerHTML = charactersLeft;
-        }
-
-        let textareaField = document.getElementById('textarea_field');
-
-        textareaField.addEventListener('keyup', textareaLengthCheck, false);
-        textareaField.addEventListener('keydown', textareaLengthCheck, false);
-    </script>
-
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/slick.min.js"></script>   
     <script src="js/main.js"></script> 

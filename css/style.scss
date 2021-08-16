@@ -340,9 +340,6 @@ header {
         a {
             padding: 14px 20px !important;
         }
-        @include _1400px() {
-            margin-left: 0 !important;
-        }
     }
     .mobile_menu {
         .menu {
@@ -1235,7 +1232,7 @@ header {
     .training_block {
         padding: 40px 0 55px;
         @include _992px() {
-            padding: 30px 0;
+            padding: 0 0 30px;
         }
         @include _767px() {
             text-align: center
@@ -1836,6 +1833,15 @@ header {
             text-align: left !important;
         }
     }
+    .top_marg {
+        margin-top: 60px !important;
+        @include _1200px() {
+            margin-top: 0 !important;
+        }
+        @include _576px() {
+            text-align: center !important;
+        }
+    }
     p {
         max-width: 484px;
     }
@@ -1893,7 +1899,7 @@ header {
     padding-top: 70px;
     min-height: 390px;
     text-align: center;
-    margin: 70px 0 30px;
+    margin: 10px 0 30px;
     background-image: url(../img/authorized/author-bg1.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1919,11 +1925,19 @@ header {
         @include _1200px() {
             width: 64%;
         }
+        @include _576px() {
+            width: 80%;
+            left: -35px;
+        }
     }
     .right_img {
         right: 0;
         @include _1200px() {
             width: 64%;
+        }
+        @include _576px() {
+            width: 80%;
+            right: -35px;
         }
     }
     .otchety_img {
@@ -1981,20 +1995,35 @@ header {
     }
 }
 .authorized_about {
+    .about_tablet {
+        @include _576px() {
+            margin-bottom: 0 !important;
+        }
+    }
     padding-bottom: 30px;
     .about_img1 {
         @include _992px() {
             display: block !important;
         }
         @include _767px() {
-            position: absolute;
-            top: -10px;
-            width: 38%;
+            // position: absolute;
+            // top: -10px;
+            width: 50%;
+            margin: 0 auto;
         }
     }
     .soc_links {
         @include _576px() {
             justify-content: center;
+        }
+        li {
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @include _576px() {
+                margin-right: 20px;
+            }
         }
     }
     h3 {
@@ -2005,15 +2034,11 @@ header {
             max-width: 222px;
             text-align: center;
             margin: 0 auto 10px;
-            margin-right: 20px;
-            margin-top: 40px !important; 
+            // margin-right: 20px;
+            // margin-top: 40px !important; 
         }
         @include _576px() {
             padding-top: 0;
-        }
-        @include _360px() {
-            margin-right: 0 !important;
-            margin-top: 20px !important;
         }
     }
     p {
@@ -2023,21 +2048,6 @@ header {
         @include _767px() {
             font-size: 20px !important;
             text-align: center !important;
-            padding-top: 10px !important;
-        }
-        @include _576px() {
-            padding-top: 40px !important;
-        }
-        @include _360px() {
-            padding-top: 30px !important;
-        }
-    }
-    ul {
-        li {
-            margin-right: 30px;
-            @include _576px() {
-                margin: 0 20px;
-            }
         }
     }
 }
@@ -2047,11 +2057,11 @@ header {
         margin-bottom: 70px;
         @include _992px() {
             font-size: 32px;
+            margin-bottom: 0;
         }
         @include _576px() {
             font-size: 28px;
             line-height: 34px;
-            margin-bottom: 20px;
         }
     }
     .author_blog {
@@ -2161,12 +2171,68 @@ header {
         padding: 90px 0 30px;
     }
     .author_blog_div {
+        box-shadow: 1px 1px 7px #D8D8D8;
+        margin: 30px 0 !important;
+        .ava_blog {
+            width: 20%;
+            padding-left: 0;
+            @include _767px() {
+                width: 27%;
+            }
+            @include _576px() {
+                width: 38%;
+            }
+        }
+        .post_blog {
+            width: 68%;
+            @include _767px() {
+                width: 62%;
+            }
+            @include _576px() {
+                width: 62%;
+            }
+            p {
+                @include desc(400, 20px, 24px, #102543);
+                padding: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                @include _992px() {
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin: 7px 0;
+                }
+                @include _576px() {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+        .icons_blog {
+            width: 11%;
+            @include _576px() {
+                width: 100%;
+            }
+        }
+        div {
+            &:nth-child(2) {
+                padding: 0 !important;
+            }
+        }
         .pl_none {
             @include _576px() {
                 padding-left: 0 !important;
             }
         }
-        p {
+        .ava_img {
+            width: 100%;
+            @include _576px() {
+                width: 100%;
+            }
+        }
+        h5 {
             @include desc(600, 32px, 39px, #102543);
             margin: 20px 0;
             padding: 0;
@@ -2176,13 +2242,16 @@ header {
                 margin: 7px 0;
             }
             @include _576px() {
-                font-size: 18px;
-                line-height: 22px;
+                font-size: 16px;
+                line-height: 20px;
             }
         }
         a {
             @include desc(400, 20px, 24px, #EF5448);
             margin: 20px 0;
+            &:hover {
+                text-decoration: underline;
+            }
             @include _992px() {
                 font-size: 16px;
                 line-height: 20px;
@@ -2190,7 +2259,7 @@ header {
             }
             @include _576px() {
                 position: absolute;
-                bottom: 30px;
+                bottom: 4px;
                 left: 14px;
             }
             svg {
@@ -2206,7 +2275,7 @@ header {
                 }
             }
             @include _576px() {
-                margin-top: 30px;
+                margin-top: 12px;
             }
             span {
                 @include desc(500, 16px, 20px, #102543);
@@ -2827,6 +2896,60 @@ header {
             p {
                 @include desc(400, 16px, 20px, #102543);
                 margin: 7px 0;
+            }
+        }
+    }
+    .personal_datas {
+        form {
+            .datas_block {
+                h5 {
+                    @include desc(700, 18px, 22px, #102543);
+                    margin: 20px 0;
+                    text-align: left;
+                    @include _576px() {
+                        align-items: flex-start !important;
+                    }
+                    svg {
+                        margin-right: 7px;
+                        @include _576px() {
+                            margin-top: 2px;
+                        }
+                    }
+                }
+                .w-100 {
+                    margin: 14px 0;
+                    p {
+                        @include desc(400, 16px, 130%, #102543);
+                        margin: 0;
+                        text-align: left;
+                        padding-right: 5px;
+                    }
+                    input,
+                    textarea,
+                    select {
+                        border: 1px solid #D8D8D8;
+                        box-sizing: border-box;
+                        border-radius: 3px;
+                        height: 40px;
+                        background: transparent;
+                        @include desc(400, 16px, 20px, #102543);
+                        width: 200px;
+                        padding: 7px 10px;
+                        @include _576px() {
+                            width: 100%;
+                        }
+                        &::placeholder {
+                            color: #848199;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    textarea {
+                        resize: none;
+                        height: auto;
+                    }
+                }
             }
         }
     }

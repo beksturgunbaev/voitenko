@@ -417,12 +417,6 @@ header .burger_menu_personal .line3.show {
 }
 
 @media (max-width: 1400px) {
-  .authorized_header .sign_in_authorized {
-    margin-left: 0 !important;
-  }
-}
-
-@media (max-width: 1400px) {
   .authorized_header .mobile_menu .menu li {
     margin: 16px 8px !important;
   }
@@ -1807,7 +1801,7 @@ header .burger_menu_personal .line3.show {
 
 @media (max-width: 992px) {
   #training .training_block {
-    padding: 30px 0;
+    padding: 0 0 30px;
   }
 }
 
@@ -2765,6 +2759,22 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+.authorized .top_marg {
+  margin-top: 60px !important;
+}
+
+@media (max-width: 1200px) {
+  .authorized .top_marg {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .authorized .top_marg {
+    text-align: center !important;
+  }
+}
+
 .authorized p {
   max-width: 484px;
 }
@@ -2858,7 +2868,7 @@ header .burger_menu_personal .line3.show {
   padding-top: 70px;
   min-height: 390px;
   text-align: center;
-  margin: 70px 0 30px;
+  margin: 10px 0 30px;
   background-image: url(../img/authorized/author-bg1.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -2901,6 +2911,13 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+@media (max-width: 576px) {
+  .author_block .left_img {
+    width: 80%;
+    left: -35px;
+  }
+}
+
 .author_block .right_img {
   right: 0;
 }
@@ -2908,6 +2925,13 @@ header .burger_menu_personal .line3.show {
 @media (max-width: 1200px) {
   .author_block .right_img {
     width: 64%;
+  }
+}
+
+@media (max-width: 576px) {
+  .author_block .right_img {
+    width: 80%;
+    right: -35px;
   }
 }
 
@@ -2997,6 +3021,12 @@ header .burger_menu_personal .line3.show {
   padding-bottom: 30px;
 }
 
+@media (max-width: 576px) {
+  .authorized_about .about_tablet {
+    margin-bottom: 0 !important;
+  }
+}
+
 @media (max-width: 992px) {
   .authorized_about .about_img1 {
     display: block !important;
@@ -3005,9 +3035,8 @@ header .burger_menu_personal .line3.show {
 
 @media (max-width: 767px) {
   .authorized_about .about_img1 {
-    position: absolute;
-    top: -10px;
-    width: 38%;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
@@ -3016,6 +3045,20 @@ header .burger_menu_personal .line3.show {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+.authorized_about .soc_links li {
+  margin-right: 30px;
+}
+
+.authorized_about .soc_links li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 576px) {
+  .authorized_about .soc_links li {
+    margin-right: 20px;
   }
 }
 
@@ -3030,21 +3073,12 @@ header .burger_menu_personal .line3.show {
     max-width: 222px;
     text-align: center;
     margin: 0 auto 10px;
-    margin-right: 20px;
-    margin-top: 40px !important;
   }
 }
 
 @media (max-width: 576px) {
   .authorized_about h3 {
     padding-top: 0;
-  }
-}
-
-@media (max-width: 360px) {
-  .authorized_about h3 {
-    margin-right: 0 !important;
-    margin-top: 20px !important;
   }
 }
 
@@ -3058,29 +3092,6 @@ header .burger_menu_personal .line3.show {
   .authorized_about p {
     font-size: 20px !important;
     text-align: center !important;
-    padding-top: 10px !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .authorized_about p {
-    padding-top: 40px !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .authorized_about p {
-    padding-top: 30px !important;
-  }
-}
-
-.authorized_about ul li {
-  margin-right: 30px;
-}
-
-@media (max-width: 576px) {
-  .authorized_about ul li {
-    margin: 0 20px;
   }
 }
 
@@ -3096,6 +3107,7 @@ header .burger_menu_personal .line3.show {
 @media (max-width: 992px) {
   #author_container h3 {
     font-size: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -3103,7 +3115,6 @@ header .burger_menu_personal .line3.show {
   #author_container h3 {
     font-size: 28px;
     line-height: 34px;
-    margin-bottom: 20px;
   }
 }
 
@@ -3263,13 +3274,104 @@ header .burger_menu_personal .line3.show {
   padding: 90px 0 30px;
 }
 
+#org_moments .author_blog_div {
+  -webkit-box-shadow: 1px 1px 7px #D8D8D8;
+          box-shadow: 1px 1px 7px #D8D8D8;
+  margin: 30px 0 !important;
+}
+
+#org_moments .author_blog_div .ava_blog {
+  width: 20%;
+  padding-left: 0;
+}
+
+@media (max-width: 767px) {
+  #org_moments .author_blog_div .ava_blog {
+    width: 27%;
+  }
+}
+
+@media (max-width: 576px) {
+  #org_moments .author_blog_div .ava_blog {
+    width: 38%;
+  }
+}
+
+#org_moments .author_blog_div .post_blog {
+  width: 68%;
+}
+
+@media (max-width: 767px) {
+  #org_moments .author_blog_div .post_blog {
+    width: 62%;
+  }
+}
+
+@media (max-width: 576px) {
+  #org_moments .author_blog_div .post_blog {
+    width: 62%;
+  }
+}
+
+#org_moments .author_blog_div .post_blog p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #102543;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 992px) {
+  #org_moments .author_blog_div .post_blog p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 7px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #org_moments .author_blog_div .post_blog p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+#org_moments .author_blog_div .icons_blog {
+  width: 11%;
+}
+
+@media (max-width: 576px) {
+  #org_moments .author_blog_div .icons_blog {
+    width: 100%;
+  }
+}
+
+#org_moments .author_blog_div div:nth-child(2) {
+  padding: 0 !important;
+}
+
 @media (max-width: 576px) {
   #org_moments .author_blog_div .pl_none {
     padding-left: 0 !important;
   }
 }
 
-#org_moments .author_blog_div p {
+#org_moments .author_blog_div .ava_img {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  #org_moments .author_blog_div .ava_img {
+    width: 100%;
+  }
+}
+
+#org_moments .author_blog_div h5 {
   font-weight: 600;
   font-size: 32px;
   line-height: 39px;
@@ -3279,7 +3381,7 @@ header .burger_menu_personal .line3.show {
 }
 
 @media (max-width: 992px) {
-  #org_moments .author_blog_div p {
+  #org_moments .author_blog_div h5 {
     font-size: 20px;
     line-height: 24px;
     margin: 7px 0;
@@ -3287,9 +3389,9 @@ header .burger_menu_personal .line3.show {
 }
 
 @media (max-width: 576px) {
-  #org_moments .author_blog_div p {
-    font-size: 18px;
-    line-height: 22px;
+  #org_moments .author_blog_div h5 {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -3299,6 +3401,10 @@ header .burger_menu_personal .line3.show {
   line-height: 24px;
   color: #EF5448;
   margin: 20px 0;
+}
+
+#org_moments .author_blog_div a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 992px) {
@@ -3312,7 +3418,7 @@ header .burger_menu_personal .line3.show {
 @media (max-width: 576px) {
   #org_moments .author_blog_div a {
     position: absolute;
-    bottom: 30px;
+    bottom: 4px;
     left: 14px;
   }
 }
@@ -3331,7 +3437,7 @@ header .burger_menu_personal .line3.show {
 
 @media (max-width: 576px) {
   #org_moments .author_blog_div .blog_datas {
-    margin-top: 30px;
+    margin-top: 12px;
   }
 }
 
@@ -4347,6 +4453,107 @@ header .burger_menu_personal .line3.show {
   line-height: 20px;
   color: #102543;
   margin: 7px 0;
+}
+
+#personal_room .personal_datas form .datas_block h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #102543;
+  margin: 20px 0;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_datas form .datas_block h5 {
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+}
+
+#personal_room .personal_datas form .datas_block h5 svg {
+  margin-right: 7px;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_datas form .datas_block h5 svg {
+    margin-top: 2px;
+  }
+}
+
+#personal_room .personal_datas form .datas_block .w-100 {
+  margin: 14px 0;
+}
+
+#personal_room .personal_datas form .datas_block .w-100 p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #102543;
+  margin: 0;
+  text-align: left;
+  padding-right: 5px;
+}
+
+#personal_room .personal_datas form .datas_block .w-100 input,
+#personal_room .personal_datas form .datas_block .w-100 textarea,
+#personal_room .personal_datas form .datas_block .w-100 select {
+  border: 1px solid #D8D8D8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  height: 40px;
+  background: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #102543;
+  width: 200px;
+  padding: 7px 10px;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_datas form .datas_block .w-100 input,
+  #personal_room .personal_datas form .datas_block .w-100 textarea,
+  #personal_room .personal_datas form .datas_block .w-100 select {
+    width: 100%;
+  }
+}
+
+#personal_room .personal_datas form .datas_block .w-100 input::-webkit-input-placeholder,
+#personal_room .personal_datas form .datas_block .w-100 textarea::-webkit-input-placeholder,
+#personal_room .personal_datas form .datas_block .w-100 select::-webkit-input-placeholder {
+  color: #848199;
+}
+
+#personal_room .personal_datas form .datas_block .w-100 input:-ms-input-placeholder,
+#personal_room .personal_datas form .datas_block .w-100 textarea:-ms-input-placeholder,
+#personal_room .personal_datas form .datas_block .w-100 select:-ms-input-placeholder {
+  color: #848199;
+}
+
+#personal_room .personal_datas form .datas_block .w-100 input::-ms-input-placeholder,
+#personal_room .personal_datas form .datas_block .w-100 textarea::-ms-input-placeholder,
+#personal_room .personal_datas form .datas_block .w-100 select::-ms-input-placeholder {
+  color: #848199;
+}
+
+#personal_room .personal_datas form .datas_block .w-100 input::placeholder,
+#personal_room .personal_datas form .datas_block .w-100 textarea::placeholder,
+#personal_room .personal_datas form .datas_block .w-100 select::placeholder {
+  color: #848199;
+}
+
+#personal_room .personal_datas form .datas_block .w-100 input:focus,
+#personal_room .personal_datas form .datas_block .w-100 textarea:focus,
+#personal_room .personal_datas form .datas_block .w-100 select:focus {
+  outline: none;
+}
+
+#personal_room .personal_datas form .datas_block .w-100 textarea {
+  resize: none;
+  height: auto;
 }
 
 @media (max-width: 1200px) {

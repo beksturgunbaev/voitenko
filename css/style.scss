@@ -175,6 +175,12 @@ header {
             }
         }
     }
+    .direc_title {
+        @include _992px() {
+            margin-top: 40px !important;
+            text-align: center
+        }
+    }
     .logo {
         a {
             @include title(900, 20px, 24px, #102543, uppercase);
@@ -240,6 +246,10 @@ header {
                         line-height: 24px;
                         font-weight: 500;
                         text-transform: uppercase;
+                        @include _360px() {
+                            font-size: 18px;
+                            line-height: 21px;
+                        }
                     }
                 }
             }
@@ -388,9 +398,20 @@ header {
             }
         }
         .hidden_menu {
+            li {
+                &:last-child {
+                    padding-top: 10px;
+                }
+                a {
+                    font-weight: 500 !important;
+                }
+            }
             @include _1200px() {
                 display: none !important;
             }
+        }
+        .directors_menu {
+            text-align: right;
         }
         li {
             margin: 10px 0;
@@ -1529,6 +1550,9 @@ header {
             line-height: 34px;
             padding-left: 0;
         }
+        @include _576px() {
+            padding: 0;
+        }
     }
     .breakfast {
         img {
@@ -2153,6 +2177,7 @@ header {
         background-repeat: no-repeat;
         @include _576px() {
             background-position: 3% 50%;
+            margin: 30px auto 20px;
         }
         &:focus {
             outline: none;
@@ -2341,6 +2366,11 @@ header {
             z-index: -1;
             opacity: .2;
         }
+        .directors_page {
+            @include _767px() {
+                display: none;
+            }
+        }
         h1 {
             @include title(900, 80px, 98px, #102543, uppercase);
             @include _992px() {
@@ -2456,6 +2486,7 @@ header {
             table {
                 border-color: #102543;
                 th {
+                    vertical-align: middle;
                     @include desc(400, 24px, 29px, #102543);
                     @include _1200px() {
                         font-size: 16px;
@@ -2469,10 +2500,10 @@ header {
                         font-size: 9px;
                         line-height: 11px;
                         padding: 3px 1px;
-                        vertical-align: top;
                     }
                 }
                 td {
+                    vertical-align: middle;
                     @include desc(400, 16px, 20px, #102543);
                     @include _992px() {
                         font-size: 14px;
@@ -2543,9 +2574,14 @@ header {
                     border-radius: 3px;
                     background: transparent;
                     padding: 0 10px;
+                    @include desc(400, 16px, 130%, #102543);
                     &:focus {
                         outline: none;
                     }
+                }
+                select,
+                label {
+                    font-weight: 500 !important;
                 }
                 textarea {
                     border: 1px solid #D8D8D8;
@@ -2883,6 +2919,265 @@ header {
                 }
             }
         }
+        .directors_reports {
+            h5 {
+                @include _767px() {
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin: 25px 0 20px;
+                }
+            }
+            table {
+                th {
+                    font-weight: 700;
+                    height: 70px;
+                    vertical-align: middle;
+                }
+                td {
+                    font-weight: 500;
+                    height: 70px;
+                    vertical-align: middle;
+                    &.active { 
+                        span {
+                            width: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 50px;
+                            background: #102543;
+                            margin: 0 auto;
+                            color: #fff;
+                            @include _576px() {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            .reports_table {
+                th {
+                    font-size: 20px;
+                    line-height: 24px;
+                    @include _1200px() {
+                        font-size: 14px !important;
+                        line-height: 17px !important;
+                    }
+                }
+                td {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .first_table {
+                thead {
+                    th {
+                        @include _1200px() {
+                            font-size: 16px !important;
+                            line-height: 20px !important;
+                            width: 130px !important;
+                            height: 70px !important;
+                        }
+                        @include _576px() {
+                            font-size: 8px !important;
+                            line-height: 10px !important;
+                            width: 100px !important;
+                            height: 30px !important;
+                        }
+                    }
+                }
+                tbody {
+                    td {
+                        @include _1200px() {
+                            width: 130px !important;
+                            height: 70px !important;
+                        }
+                        @include _576px() {
+                            font-size: 8px !important;
+                            line-height: 10px !important;
+                            width: 100px !important;
+                            height: 30px !important;
+                        }
+                    }
+                }
+            }
+            .second_table {
+                @include _992px() {
+                    margin-top: 0 !important;
+                }
+                thead {
+                    th {
+                        height: 40px;
+                        font-size: 20px;
+                        line-height: 24px;
+                        width: 140px;
+                        &:first-child {
+                            width: auto;
+                        }
+                        @include _1200px() {
+                            font-size: 12px !important;
+                            line-height: 15px !important;
+                            &:first-child {
+                                width: 270px !important;
+                            }
+                            svg {
+                                width: 16px !important;
+                                @include _576px() {
+                                    width: 12px !important;
+                                }
+                            }
+                        }
+                        @include _576px() {
+                            font-size: 8px !important;
+                            line-height: 10px !important;
+                        }
+                    }
+                }
+                tbody {
+                    td {
+                        font-size: 18px;
+                        line-height: 22px;
+                        @include _1200px() {
+                            font-size: 12px;
+                            line-height: 15px;
+                            height: 60px !important;
+                        }
+                        @include _576px() {
+                            font-size: 8px !important;
+                            line-height: 10px !important;
+                            height: 40px !important;
+                        }
+                    }
+                    .mini_txt {
+                        font-size: 14px;
+                        line-height: 17px;
+                        @include _1200px() {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                    }
+                }
+            }
+            .second_table_two {
+                @include _992px() {
+                    margin-top: 2rem !important;
+                }
+                @include _576px() {
+                    margin-top: 2rem !important;
+                }
+            }
+            .third_table {
+                thead {
+                    border-top: transparent;
+                    th {
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 24px;
+                        height: 44px;
+                        @include _1200px() {
+                            font-size: 12px;
+                            line-height: 15px;
+                            height: 35px !important;
+                        }
+                        @include _576px() {
+                            font-size: 8px !important;
+                            line-height: 10px !important;
+                            height: 12px !important;
+                        }
+                    }
+                }
+                tbody {
+                    td {
+                        height: 44px;
+                        @include _1200px() {
+                            font-size: 12px;
+                            line-height: 15px;
+                            height: 35px !important;
+                        }
+                        @include _576px() {
+                            font-size: 8px !important;
+                            line-height: 10px !important;
+                            height: 26px !important;
+                        }
+                    }
+                    .aa {
+                        @include _576px() {
+                            height: 20px !important;
+                        }
+                    }
+                    .third_svg {
+                        background: #102543;
+                        vertical-align: middle;
+                        @include _992px() {
+                            svg {
+                                width: 16px !important;
+                                height: 16px !important;
+                            }
+                        }
+                        @include _576px() {
+                            svg {
+                                width: 10px !important;
+                                height: 10px !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .line_div {
+                padding-bottom: 2rem;
+                @include _992px(){
+                    padding-bottom: 1rem;
+                }
+            }
+            .direc_txt {
+                @include _992px() {
+                    flex-direction: column;
+                }
+                h6 {
+                    @include desc(500, 20px, 24px, #102543);
+                    @include _992px() {
+                        order: 1;
+                        margin-top: 30px;
+                        text-align: left
+                    }
+                    @include _767px() {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+                button {
+                    @include buttons(700, 16px, #fff, #EF5448, none, 3px, 220px, 50px, none);
+                    &:hover {
+                        background: #102543;
+                    }
+                    @include _992px() {
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .direc_txt2 {
+                button {
+                    background: #102543;
+                    &:hover {
+                        background: #EF5448;
+                    }
+                }
+                @include _576px() {
+                    margin: 2rem 0 1rem !important;
+                }
+            }
+        }
+    }
+    .directors_main {
+        @include _767px() {
+            padding-top: 0 !important;
+        }
+        @include _576px() {
+            h1 {
+                font-size: 24px;
+                line-height: 29px;
+            }
+        }
     }
     .my_menu_block {
         text-align: center;
@@ -2923,6 +3218,12 @@ header {
                         margin: 0;
                         text-align: left;
                         padding-right: 5px;
+                        @include _576px() {
+                            font-size: 15px;
+                        }
+                        @include _360px() {
+                            font-size: 13px;
+                        }
                     }
                     input,
                     textarea,
@@ -2936,7 +3237,12 @@ header {
                         width: 200px;
                         padding: 7px 10px;
                         @include _576px() {
+                            font-size: 15px;
                             width: 100%;
+                            height: 35px;
+                        }
+                        @include _360px() {
+                            font-size: 13px;
                         }
                         &::placeholder {
                             color: #848199;
@@ -2948,8 +3254,22 @@ header {
                     textarea {
                         resize: none;
                         height: auto;
+                        @include _576px() {
+                            height: 78px;
+                        }
                     }
                 }
+            }
+        }
+    }
+}
+.directors_main {
+    @include _992px() {
+        padding: 0 0 20px !important;
+        h1 {
+            @include _992px() {
+                font-size: 52px !important;
+                line-height: 58px !important;
             }
         }
     }

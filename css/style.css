@@ -161,6 +161,13 @@ header .marafon_date {
   }
 }
 
+@media (max-width: 992px) {
+  header .direc_title {
+    margin-top: 40px !important;
+    text-align: center;
+  }
+}
+
 header .logo a {
   font-weight: 900;
   font-size: 20px;
@@ -263,6 +270,13 @@ header .mobile_menu .menu li a.active {
     line-height: 24px;
     font-weight: 500;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 360px) {
+  header .mobile_menu .menu li a {
+    font-size: 18px;
+    line-height: 21px;
   }
 }
 
@@ -475,10 +489,22 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+.authorized_header .personal_menu .hidden_menu li:last-child {
+  padding-top: 10px;
+}
+
+.authorized_header .personal_menu .hidden_menu li a {
+  font-weight: 500 !important;
+}
+
 @media (max-width: 1200px) {
   .authorized_header .personal_menu .hidden_menu {
     display: none !important;
   }
+}
+
+.authorized_header .personal_menu .directors_menu {
+  text-align: right;
 }
 
 .authorized_header .personal_menu li {
@@ -2260,6 +2286,12 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+@media (max-width: 576px) {
+  #example_menu h1 {
+    padding: 0;
+  }
+}
+
 #example_menu .breakfast img {
   margin: 10px auto;
   -webkit-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
@@ -3246,6 +3278,7 @@ header .burger_menu_personal .line3.show {
 @media (max-width: 576px) {
   #org_moments .search {
     background-position: 3% 50%;
+    margin: 30px auto 20px;
   }
 }
 
@@ -3541,6 +3574,12 @@ header .burger_menu_personal .line3.show {
   opacity: .2;
 }
 
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_page {
+    display: none;
+  }
+}
+
 #personal_room .personal_main h1 {
   font-weight: 900;
   font-size: 80px;
@@ -3728,6 +3767,7 @@ header .burger_menu_personal .line3.show {
 }
 
 #personal_room .personal_main .categories_block table th {
+  vertical-align: middle;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
@@ -3753,11 +3793,11 @@ header .burger_menu_personal .line3.show {
     font-size: 9px;
     line-height: 11px;
     padding: 3px 1px;
-    vertical-align: top;
   }
 }
 
 #personal_room .personal_main .categories_block table td {
+  vertical-align: middle;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -3865,11 +3905,20 @@ header .burger_menu_personal .line3.show {
   border-radius: 3px;
   background: transparent;
   padding: 0 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #102543;
 }
 
 #personal_room .personal_main .categories_block .personal_container input:focus,
 #personal_room .personal_main .categories_block .personal_container select:focus {
   outline: none;
+}
+
+#personal_room .personal_main .categories_block .personal_container select,
+#personal_room .personal_main .categories_block .personal_container label {
+  font-weight: 500 !important;
 }
 
 #personal_room .personal_main .categories_block .personal_container textarea {
@@ -4438,6 +4487,364 @@ header .burger_menu_personal .line3.show {
   max-width: 490px;
 }
 
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports h5 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 25px 0 20px;
+  }
+}
+
+#personal_room .personal_main .directors_reports table th {
+  font-weight: 700;
+  height: 70px;
+  vertical-align: middle;
+}
+
+#personal_room .personal_main .directors_reports table td {
+  font-weight: 500;
+  height: 70px;
+  vertical-align: middle;
+}
+
+#personal_room .personal_main .directors_reports table td.active span {
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background: #102543;
+  margin: 0 auto;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports table td.active span {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#personal_room .personal_main .directors_reports .reports_table th {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .reports_table th {
+    font-size: 14px !important;
+    line-height: 17px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .reports_table td {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .first_table thead th {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    width: 130px !important;
+    height: 70px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .first_table thead th {
+    font-size: 8px !important;
+    line-height: 10px !important;
+    width: 100px !important;
+    height: 30px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .first_table tbody td {
+    width: 130px !important;
+    height: 70px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .first_table tbody td {
+    font-size: 8px !important;
+    line-height: 10px !important;
+    width: 100px !important;
+    height: 30px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .second_table {
+    margin-top: 0 !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .second_table thead th {
+  height: 40px;
+  font-size: 20px;
+  line-height: 24px;
+  width: 140px;
+}
+
+#personal_room .personal_main .directors_reports .second_table thead th:first-child {
+  width: auto;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .second_table thead th {
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+  #personal_room .personal_main .directors_reports .second_table thead th:first-child {
+    width: 270px !important;
+  }
+  #personal_room .personal_main .directors_reports .second_table thead th svg {
+    width: 16px !important;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .second_table thead th svg {
+    width: 12px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .second_table thead th {
+    font-size: 8px !important;
+    line-height: 10px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .second_table tbody td {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .second_table tbody td {
+    font-size: 12px;
+    line-height: 15px;
+    height: 60px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .second_table tbody td {
+    font-size: 8px !important;
+    line-height: 10px !important;
+    height: 40px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .second_table tbody .mini_txt {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .second_table tbody .mini_txt {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .second_table_two {
+    margin-top: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .second_table_two {
+    margin-top: 2rem !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .third_table thead {
+  border-top: transparent;
+}
+
+#personal_room .personal_main .directors_reports .third_table thead th {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  height: 44px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .third_table thead th {
+    font-size: 12px;
+    line-height: 15px;
+    height: 35px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .third_table thead th {
+    font-size: 8px !important;
+    line-height: 10px !important;
+    height: 12px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .third_table tbody td {
+  height: 44px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .third_table tbody td {
+    font-size: 12px;
+    line-height: 15px;
+    height: 35px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .third_table tbody td {
+    font-size: 8px !important;
+    line-height: 10px !important;
+    height: 26px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .third_table tbody .aa {
+    height: 20px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .third_table tbody .third_svg {
+  background: #102543;
+  vertical-align: middle;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .third_table tbody .third_svg svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .third_table tbody .third_svg svg {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .line_div {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .line_div {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .direc_txt {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#personal_room .personal_main .directors_reports .direc_txt h6 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #102543;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .direc_txt h6 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 30px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .direc_txt h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+#personal_room .personal_main .directors_reports .direc_txt button {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background: #EF5448;
+  border: none;
+  border-radius: 3px;
+  width: 220px;
+  height: 50px;
+  text-transform: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#personal_room .personal_main .directors_reports .direc_txt button:hover {
+  background: #102543;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .direc_txt button {
+    margin: 0 auto;
+  }
+}
+
+#personal_room .personal_main .directors_reports .direc_txt2 button {
+  background: #102543;
+}
+
+#personal_room .personal_main .directors_reports .direc_txt2 button:hover {
+  background: #EF5448;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .direc_txt2 {
+    margin: 2rem 0 1rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .directors_main {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .directors_main h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
 #personal_room .my_menu_block {
   text-align: center;
   margin-top: 24px;
@@ -4496,6 +4903,18 @@ header .burger_menu_personal .line3.show {
   padding-right: 5px;
 }
 
+@media (max-width: 576px) {
+  #personal_room .personal_datas form .datas_block .w-100 p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  #personal_room .personal_datas form .datas_block .w-100 p {
+    font-size: 13px;
+  }
+}
+
 #personal_room .personal_datas form .datas_block .w-100 input,
 #personal_room .personal_datas form .datas_block .w-100 textarea,
 #personal_room .personal_datas form .datas_block .w-100 select {
@@ -4517,7 +4936,17 @@ header .burger_menu_personal .line3.show {
   #personal_room .personal_datas form .datas_block .w-100 input,
   #personal_room .personal_datas form .datas_block .w-100 textarea,
   #personal_room .personal_datas form .datas_block .w-100 select {
+    font-size: 15px;
     width: 100%;
+    height: 35px;
+  }
+}
+
+@media (max-width: 360px) {
+  #personal_room .personal_datas form .datas_block .w-100 input,
+  #personal_room .personal_datas form .datas_block .w-100 textarea,
+  #personal_room .personal_datas form .datas_block .w-100 select {
+    font-size: 13px;
   }
 }
 
@@ -4554,6 +4983,25 @@ header .burger_menu_personal .line3.show {
 #personal_room .personal_datas form .datas_block .w-100 textarea {
   resize: none;
   height: auto;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_datas form .datas_block .w-100 textarea {
+    height: 78px;
+  }
+}
+
+@media (max-width: 992px) {
+  .directors_main {
+    padding: 0 0 20px !important;
+  }
+}
+
+@media (max-width: 992px) and (max-width: 992px) {
+  .directors_main h1 {
+    font-size: 52px !important;
+    line-height: 58px !important;
+  }
 }
 
 @media (max-width: 1200px) {

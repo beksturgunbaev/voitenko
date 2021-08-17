@@ -280,6 +280,16 @@ header .mobile_menu .menu li a.active {
   }
 }
 
+header .mobile_menu .menu .razbor_produktov {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  header .mobile_menu .menu .razbor_produktov {
+    display: block;
+  }
+}
+
 header .mobile_menu .soc_links {
   margin-left: 20px;
 }
@@ -318,7 +328,7 @@ header .mobile_menu .sign_in_authorized {
 @media (max-width: 1200px) {
   header .mobile_menu .sign_in,
   header .mobile_menu .sign_in_authorized {
-    margin: 20px 0;
+    margin: 20px 0 !important;
   }
 }
 
@@ -1268,7 +1278,19 @@ header .burger_menu_personal .line3.show {
   #costs .all_in_one {
     background-size: contain;
     position: relative;
-    padding-top: 120px;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #costs .all_in_one {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  #costs .all_in_one {
+    padding-top: 30px;
   }
 }
 
@@ -1373,6 +1395,12 @@ header .burger_menu_personal .line3.show {
   left: 3rem;
 }
 
+@media (max-width: 1200px) {
+  #costs .all_in_one img {
+    bottom: -2rem;
+  }
+}
+
 @media (max-width: 992px) {
   #costs .all_in_one img {
     position: absolute;
@@ -1392,6 +1420,25 @@ header .burger_menu_personal .line3.show {
 @media (max-width: 576px) {
   #costs .all_in_one img {
     bottom: -30px;
+    width: 30%;
+  }
+}
+
+@media (max-width: 490px) {
+  #costs .all_in_one img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #costs .all_in_one .girl_img_div {
+    height: 520px;
+  }
+}
+
+@media (max-width: 992px) {
+  #costs .all_in_one .girl_img_div {
+    height: auto;
   }
 }
 
@@ -2793,7 +2840,7 @@ header .burger_menu_personal .line3.show {
 }
 
 .authorized .top_marg {
-  margin-top: 60px !important;
+  margin-top: 20px !important;
 }
 
 @media (max-width: 1200px) {
@@ -3073,6 +3120,20 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+@media (max-width: 1200px) {
+  .authorized_about .soc_links svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .authorized_about .soc_links svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 @media (max-width: 576px) {
   .authorized_about .soc_links {
     -webkit-box-pack: center;
@@ -3321,6 +3382,12 @@ header .burger_menu_personal .line3.show {
   padding-left: 0;
 }
 
+@media (max-width: 992px) {
+  #org_moments .author_blog_div .ava_blog {
+    width: 25%;
+  }
+}
+
 @media (max-width: 767px) {
   #org_moments .author_blog_div .ava_blog {
     width: 27%;
@@ -3379,6 +3446,12 @@ header .burger_menu_personal .line3.show {
 
 #org_moments .author_blog_div .icons_blog {
   width: 11%;
+}
+
+@media (max-width: 992px) {
+  #org_moments .author_blog_div .icons_blog {
+    width: 0;
+  }
 }
 
 @media (max-width: 576px) {
@@ -4841,11 +4914,30 @@ header .burger_menu_personal .line3.show {
   height: 50px !important;
 }
 
+#personal_room .personal_main .directors_reports .participants_table .width_100px {
+  width: 90px;
+}
+
 #personal_room .personal_main .directors_reports .participants_table td {
   font-weight: 500 !important;
   font-size: 14px !important;
   line-height: 17px !important;
   height: 50px !important;
+}
+
+#personal_room .personal_main .directors_reports .participants_table select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+}
+
+#personal_room .personal_main .directors_reports .participants_table select:focus {
+  outline: none;
+}
+
+#personal_room .personal_main .directors_reports .participants_table .select_td {
+  padding: 0 10px;
 }
 
 @media (max-width: 767px) {
@@ -4856,8 +4948,8 @@ header .burger_menu_personal .line3.show {
 
 @media (max-width: 576px) {
   #personal_room .directors_main h1 {
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 24px !important;
+    line-height: 29px !important;
   }
 }
 

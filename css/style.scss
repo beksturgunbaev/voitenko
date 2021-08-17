@@ -83,6 +83,9 @@ a {
 @mixin _576px {
     @media (max-width: 576px) { @content; }
 }
+@mixin _490px {
+    @media (max-width: 490px) { @content; }
+}
 @mixin _400px {
     @media (max-width: 400px) { @content; }
 }
@@ -253,6 +256,12 @@ header {
                     }
                 }
             }
+            .razbor_produktov {
+                display: none;
+                @include _1200px() {
+                    display: block;
+                }
+            }
         }
         .soc_links {
             margin-left: 20px;
@@ -274,7 +283,7 @@ header {
                 margin-left: 20px;
             }
             @include _1200px() {
-                margin: 20px 0;
+                margin: 20px 0 !important;
             }
             a {
                 border: 2px solid #EF5448;
@@ -902,7 +911,13 @@ header {
         @include _992px() {
             background-size: contain;
             position: relative;
-            padding-top: 120px;
+            padding-top: 50px;
+        }
+        @include _768px() {
+            padding-top: 90px;
+        }
+        @include _767px() {
+            padding-top: 30px;
         }
         @include _576px() {
             padding-top: 30px;
@@ -952,6 +967,9 @@ header {
             position: relative;
             bottom: -7rem;
             left: 3rem;
+            @include _1200px() {
+                bottom: -2rem;
+            }
             @include _992px() {
                 position: absolute;
                 bottom: -70px;
@@ -964,6 +982,18 @@ header {
             }
             @include _576px() {
                 bottom: -30px;
+                width: 30%;
+            }
+            @include _490px() {
+                width: 40%;
+            }
+        }
+        .girl_img_div {
+            @include _1200px() {
+                height: 520px;
+            }
+            @include _992px() {
+                height: auto;
             }
         }
         .text-right {
@@ -1859,7 +1889,7 @@ header {
         }
     }
     .top_marg {
-        margin-top: 60px !important;
+        margin-top: 20px !important;
         @include _1200px() {
             margin-top: 0 !important;
         }
@@ -2038,6 +2068,16 @@ header {
         }
     }
     .soc_links {
+        svg {
+            @include _1200px() {
+                width: 60px;
+                height: 60px;
+            }
+            @include _576px() {
+                width: 50px;
+                height: 50px;
+            }
+        }
         @include _576px() {
             justify-content: center;
         }
@@ -2204,6 +2244,9 @@ header {
         .ava_blog {
             width: 20%;
             padding-left: 0;
+            @include _992px() {
+                width: 25%;
+            }
             @include _767px() {
                 width: 27%;
             }
@@ -2240,6 +2283,9 @@ header {
         }
         .icons_blog {
             width: 11%;
+            @include _992px() {
+                width: 0;
+            }
             @include _576px() {
                 width: 100%;
             }
@@ -3175,11 +3221,26 @@ header {
                     line-height: 20px !important;
                     height: 50px !important;
                 }
+                .width_100px {
+                    width: 90px;
+                }
                 td {
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     line-height: 17px !important;
                     height: 50px !important;
+                }
+                select {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background: transparent;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .select_td {
+                    padding: 0 10px;
                 }
             }
         }
@@ -3190,8 +3251,8 @@ header {
         }
         @include _576px() {
             h1 {
-                font-size: 24px;
-                line-height: 29px;
+                font-size: 24px !important;
+                line-height: 29px !important;
             }
         }
     }

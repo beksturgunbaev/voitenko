@@ -3120,6 +3120,10 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+.authorized_about .soc_links {
+  max-width: 720px;
+}
+
 @media (max-width: 1200px) {
   .authorized_about .soc_links svg {
     width: 60px;
@@ -3650,7 +3654,7 @@ header .burger_menu_personal .line3.show {
   opacity: .2;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   #personal_room .personal_main .directors_page {
     display: none;
   }
@@ -4908,14 +4912,52 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .tablet_center {
+    display: block !important;
+    margin-top: 0 !important;
+  }
+  #personal_room .personal_main .directors_reports .tablet_center button {
+    margin: 30px auto 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .participants_table {
+    margin-top: 30px !important;
+  }
+}
+
 #personal_room .personal_main .directors_reports .participants_table th {
   font-size: 16px !important;
   line-height: 20px !important;
   height: 50px !important;
 }
 
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .participants_table th {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    height: 32px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .participants_table th {
+    font-size: 7px !important;
+    line-height: 9px !important;
+    height: auto !important;
+  }
+}
+
 #personal_room .personal_main .directors_reports .participants_table .width_100px {
   width: 90px;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .participants_table .width_100px {
+    width: auto !important;
+  }
 }
 
 #personal_room .personal_main .directors_reports .participants_table td {
@@ -4923,6 +4965,37 @@ header .burger_menu_personal .line3.show {
   font-size: 14px !important;
   line-height: 17px !important;
   height: 50px !important;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .participants_table td {
+    font-size: 10px !important;
+    line-height: 12px !important;
+    height: 44px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .participants_table td {
+    font-size: 7px !important;
+    line-height: 9px !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .participants_table svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .participants_table svg {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 2px;
+  }
 }
 
 #personal_room .personal_main .directors_reports .participants_table select {
@@ -4938,6 +5011,60 @@ header .burger_menu_personal .line3.show {
 
 #personal_room .personal_main .directors_reports .participants_table .select_td {
   padding: 0 10px;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .participants_table .select_td {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .participants_table .select_td {
+    padding: 0 2px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .partic_selects {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .partic_selects {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .partic_selects form {
+  max-width: 260px;
+  width: 100%;
+}
+
+#personal_room .personal_main .directors_reports .partic_selects form select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #102543;
+  background: #fff;
+  margin: 4px 0;
+  padding: 0 5px;
+}
+
+#personal_room .personal_main .directors_reports .partic_selects form select:focus {
+  outline: none;
+}
+
+#personal_room .personal_main .directors_reports .partic_selects form .small_selects select {
+  width: 48%;
 }
 
 @media (max-width: 767px) {

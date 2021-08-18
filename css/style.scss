@@ -3241,6 +3241,10 @@ header {
                         line-height: 9px !important;
                         height: auto !important;
                     }
+                    @include _576px() {
+                        font-size: 4px !important;
+                        line-height: 5px !important;
+                    }
                 }
                 .width_100px {
                     width: 90px;
@@ -3263,6 +3267,10 @@ header {
                         line-height: 9px !important;
                         height: auto !important;
                     }
+                    @include _576px() {
+                        font-size: 4px !important;
+                        line-height: 5px !important;
+                    }
                 }
                 svg {
                     @include _1200px() {
@@ -3273,6 +3281,10 @@ header {
                         width: 10px !important;
                         height: 10px !important; 
                         margin: 0 2px;
+                    }
+                    @include _576px() {
+                        width: 5px !important;
+                        height: 5px !important;
                     }
                 }
                 select {
@@ -3286,6 +3298,15 @@ header {
                 }
                 .select_td {
                     padding: 0 10px;
+                    @include _1200px() {
+                        select {
+                            -webkit-appearance: none;
+                            background-image: url(../img/Vector.svg);
+                            background-repeat: no-repeat;
+                            background-position: right;
+                            padding-right: 6px;
+                        }
+                    }
                     @include _992px() {
                         padding: 0 5px;
                     }

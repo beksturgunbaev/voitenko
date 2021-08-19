@@ -3181,6 +3181,9 @@ header {
                 @include _992px() {
                     flex-direction: column;
                 }
+                @include _576px() {
+                    justify-content: center !important;
+                }
                 h6 {
                     @include desc(500, 20px, 24px, #102543);
                     @include _992px() {
@@ -3212,6 +3215,12 @@ header {
                 }
                 @include _576px() {
                     margin: 2rem 0 1rem !important;
+                }
+            }
+            .mobile_show_btn {
+                display: none !important;
+                @include _1200px() {
+                    display: block !important;
                 }
             }
             .tablet_center {
@@ -3345,6 +3354,260 @@ header {
                     }
                 }
             }
+            .results_table {
+                th {
+                    @include _1200px() {
+                        font-size: 16px !important;
+                        line-height: 20px !important;
+                    }
+                    @include _576px() {
+                        font-size: 8px !important;
+                        line-height: 10px !important;
+                    }
+                }
+                td {
+                    @include _1200px() {
+                        font-size: 16px !important;
+                        line-height: 20px !important;
+                    }
+                    @include _576px() {
+                        font-size: 8px !important;
+                        line-height: 10px !important;
+                    }
+                    input {
+                        width: 100%;
+                        border: 1px solid #102543;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                        &:focus {
+                            outline: none;
+                        }
+                        @include _576px() {
+                            width: 95%;
+                        }
+                    }
+                }
+                svg {
+                    @include _1200px() {
+                        width: 17px !important;
+                        height: 17px !important;
+                    }
+                    @include _576px() {
+                        width: 10px !important;
+                        height: 10px !important;
+                        margin: 0 4px !important;
+                    }
+                }
+                .input_table {
+                    max-width: 520px;
+                }
+            }
+            .payment_table {
+                th {
+                    span {
+                        @include _1200px() {
+                            display: none;
+                        }
+                    }
+                    @include _1200px() {
+                        font-size: 12px !important;
+                        line-height: 15px !important;
+                    }
+                    @include _992px() {
+                        padding: 4px;
+                    }
+                    @include _767px() {
+                        font-size: 7px !important;
+                        line-height: 9px !important;
+                        font-weight: 600 !important;
+                    }
+                    @include _576px() {
+                        padding: 1px;
+                    }
+                }
+                td {
+                    input,
+                    select {
+                        border: 1px solid #102543;
+                        border-radius: 10px;
+                        height: 100%;
+                        padding: 0 10px;
+                        &:focus {
+                            outline: none;
+                        }
+                        @include _1200px() {
+                            height: 25px;
+                        }
+                        @include _992px() {
+                            border: none;
+                            padding: 0 !important;
+                        }
+                    }
+                    select {
+                        background-color: #D3FCC8;
+                        @include _992px() {
+                            border: none !important;
+                            padding: 4px 0 !important;
+                            -webkit-appearance: none;
+                            background-color: transparent;
+                            background-image: url(../img/Vector.svg) !important;
+                            background-repeat: no-repeat !important;
+                            background-position: right;
+                            padding-right: 6px;
+                        }
+                    }
+                    @include _1200px() {
+                        font-size: 10px !important;
+                        line-height: 12px !important;
+                    }
+                    @include _992px() {
+                        padding: 0 4px;
+                        height: 33px !important;
+                    }
+                    @include _767px() {
+                        font-size: 7px !important;
+                        line-height: 9px !important;
+                    }
+                    @include _576px() {
+                        padding: 1px;
+                        height: 26px !important;
+                    }
+                }
+                .comment_td {
+                    input {
+                        @include _992px() {
+                            max-width: 90px;
+                        }
+                        @include _767px() {
+                            max-width: 50px;
+                        }
+                        @include _576px() {
+                            max-width: 0;
+                        }
+                    }
+                }
+                .num_td {
+                    input {
+                        max-width: 70px;
+                        text-align: center;
+                        @include _992px() {
+                            max-width: 30px;
+                        }
+                        @include _767px() {
+                            max-width: 20px;
+                        }
+                        @include _576px() {
+                            max-width: 0;
+                        }
+                    }
+                }
+                .sum_td {
+                    input {
+                        max-width: 57px;
+                        padding: 0 2px;
+                        text-align: center;
+                        @include _576px() {
+                            max-width: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+                svg {
+                    @include _992px() {
+                        width: 15px !important;
+                        height: 15px !important;
+                    }
+                    @include _576px() {
+                        width: 8px !important;
+                        height: 8px !important;
+                    }
+                }
+                ._22px {
+                    input {
+                        max-width: 30px;
+                        height: 22px;
+                        padding: 0 2px;
+                        border-radius: 2px;
+                        @include _992px() {
+                            max-width: 16px;
+                            height: 16px;
+                            border: 1px solid #102543;
+                        }
+                        @include _767px() {
+                            max-width: 9px;
+                            height: 9px;
+                        }
+                    }
+                }
+            }
+            .payment_table_two {
+                .payment_two_select {
+                    padding: 0 30px;
+                    @include _767px() {
+                        padding: 0 3px;
+                        width: 20px;
+                    }
+                    select {
+                        background-color: #fff !important;
+                        border: none;
+                    }
+                }
+                td {
+                    input {
+                        width: 100%;
+                        @include _576px() {
+                            height: 18px !important;
+                        }
+                    }
+                    @include _576px() {
+                        line-height: 7px !important;
+                        height: 18px !important;
+                    }
+                }
+                ._22px {
+                    @include _767px() {
+                        width: 22px;
+                    }
+                    input {
+                        @include _576px() {
+                            max-width: 12px !important;
+                            height: 12px !important;
+                        }
+                    }
+                }
+            }
+            .last_table {
+                max-width: 70%;
+                margin: 0 auto;
+                @include _1400px() {
+                    max-width: 80%;
+                }
+                @include _992px() {
+                    max-width: 83%;
+                }
+                tr {
+                    border-top: none;
+                    th {
+                        font-size: 16px !important;
+                        height: 32px !important;
+                        @include _1200px() {
+                            font-size: 12px !important;
+                            font-weight: 500 !important;
+                            height: 25px !important;
+                            padding: 3px;
+                        }
+                        @include _992px() {
+                            font-size: 8px !important;
+                            height: 18px !important;
+                        }
+                        @include _576px() {
+                            font-size: 4px !important;
+                            height: 10px !important;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
         }
     }
     .directors_main {
@@ -3456,7 +3719,108 @@ header {
 .personal_room {
     @include _1200px() {
         padding: 100px 0 40px !important;
-        height: 80vh !important;
+        min-height: 80vh !important;
+    }
+}
+
+#calculator {
+    h1 {
+        @include title(900, 40px, 49px, #102543, uppercase);
+        text-align: center;
+        margin-bottom: 40px;
+        @include _576px() {
+            font-size: 32px;
+            line-height: 39px;
+        }
+    }
+    form {
+        .calc_checkbox {
+            max-width: 270px;
+            width: 100%;
+            padding-top: 7px;
+            .checkox_div {
+                
+                input {
+                    opacity: 0;
+                    visibility: hidden;
+                    height: 14px;
+                    position: absolute;
+                    &:checked + label {
+                        &::after {
+                            content: '';
+                        position: absolute;
+                        top: 6px;
+                        left: 6px;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 3px;
+                        background: #102543;
+                        }
+                    }
+                }
+                label {
+                    font-weight: 600;
+                    position: relative;
+                    padding-left: 33px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 3px;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+        h4 {
+            @include desc(700, 24px, 29px, #102543);
+            margin-bottom: 12px;
+            @include _576px() {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        span {
+            @include desc(400, 16px, 20px, #EF5448);
+        }
+        p {
+            @include desc(500, 18px, 130%, #102543);
+            margin: 7px 0;
+        }
+        input,
+        select {
+            max-width: 250px;
+            height: 40px;
+            border: 1px solid #D8D8D8;
+            border-radius: 3px;
+            @include desc(400, 16px, 130%, #102543);
+            padding: 0 7px;
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                color: #BFBFBF;
+            }
+        }
+        select {
+            max-width: 655px;
+            width: 100%;
+            background: transparent;
+            margin: 20px 0 40px;
+        }
+        h5 {
+            @include desc(700, 18px, 22px, #102543);
+            max-width: 525px;
+            margin: 20px 0;
+        }
+        button {
+            @include buttons(700, 16px, #fff, #EF5448, none, 3px, 220px, 50px, none);
+            &:hover {
+                background: #102543;
+            }
+        }
     }
 }
 

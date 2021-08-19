@@ -4841,6 +4841,14 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .direc_txt {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
 #personal_room .personal_main .directors_reports .direc_txt h6 {
   font-weight: 500;
   font-size: 20px;
@@ -4909,6 +4917,16 @@ header .burger_menu_personal .line3.show {
 @media (max-width: 576px) {
   #personal_room .personal_main .directors_reports .direc_txt2 {
     margin: 2rem 0 1rem !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .mobile_show_btn {
+  display: none !important;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .mobile_show_btn {
+    display: block !important;
   }
 }
 
@@ -5098,6 +5116,362 @@ header .burger_menu_personal .line3.show {
   width: 48%;
 }
 
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .results_table th {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .results_table th {
+    font-size: 8px !important;
+    line-height: 10px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .results_table td {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .results_table td {
+    font-size: 8px !important;
+    line-height: 10px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .results_table td input {
+  width: 100%;
+  border: 1px solid #102543;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+#personal_room .personal_main .directors_reports .results_table td input:focus {
+  outline: none;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .results_table td input {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .results_table svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .results_table svg {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 4px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .results_table .input_table {
+  max-width: 520px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .payment_table th span {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .payment_table th {
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table th {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .payment_table th {
+    font-size: 7px !important;
+    line-height: 9px !important;
+    font-weight: 600 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table th {
+    padding: 1px;
+  }
+}
+
+#personal_room .personal_main .directors_reports .payment_table td input,
+#personal_room .personal_main .directors_reports .payment_table td select {
+  border: 1px solid #102543;
+  border-radius: 10px;
+  height: 100%;
+  padding: 0 10px;
+}
+
+#personal_room .personal_main .directors_reports .payment_table td input:focus,
+#personal_room .personal_main .directors_reports .payment_table td select:focus {
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .payment_table td input,
+  #personal_room .personal_main .directors_reports .payment_table td select {
+    height: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table td input,
+  #personal_room .personal_main .directors_reports .payment_table td select {
+    border: none;
+    padding: 0 !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .payment_table td select {
+  background-color: #D3FCC8;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table td select {
+    border: none !important;
+    padding: 4px 0 !important;
+    -webkit-appearance: none;
+    background-color: transparent;
+    background-image: url(../img/Vector.svg) !important;
+    background-repeat: no-repeat !important;
+    background-position: right;
+    padding-right: 6px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .payment_table td {
+    font-size: 10px !important;
+    line-height: 12px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table td {
+    padding: 0 4px;
+    height: 33px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .payment_table td {
+    font-size: 7px !important;
+    line-height: 9px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table td {
+    padding: 1px;
+    height: 26px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table .comment_td input {
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .payment_table .comment_td input {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table .comment_td input {
+    max-width: 0;
+  }
+}
+
+#personal_room .personal_main .directors_reports .payment_table .num_td input {
+  max-width: 70px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table .num_td input {
+    max-width: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .payment_table .num_td input {
+    max-width: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table .num_td input {
+    max-width: 0;
+  }
+}
+
+#personal_room .personal_main .directors_reports .payment_table .sum_td input {
+  max-width: 57px;
+  padding: 0 2px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table .sum_td input {
+    max-width: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table svg {
+    width: 8px !important;
+    height: 8px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .payment_table ._22px input {
+  max-width: 30px;
+  height: 22px;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .payment_table ._22px input {
+    max-width: 16px;
+    height: 16px;
+    border: 1px solid #102543;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .payment_table ._22px input {
+    max-width: 9px;
+    height: 9px;
+  }
+}
+
+#personal_room .personal_main .directors_reports .payment_table_two .payment_two_select {
+  padding: 0 30px;
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .payment_table_two .payment_two_select {
+    padding: 0 3px;
+    width: 20px;
+  }
+}
+
+#personal_room .personal_main .directors_reports .payment_table_two .payment_two_select select {
+  background-color: #fff !important;
+  border: none;
+}
+
+#personal_room .personal_main .directors_reports .payment_table_two td input {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table_two td input {
+    height: 18px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table_two td {
+    line-height: 7px !important;
+    height: 18px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .payment_table_two ._22px {
+    width: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .payment_table_two ._22px input {
+    max-width: 12px !important;
+    height: 12px !important;
+  }
+}
+
+#personal_room .personal_main .directors_reports .last_table {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  #personal_room .personal_main .directors_reports .last_table {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .last_table {
+    max-width: 83%;
+  }
+}
+
+#personal_room .personal_main .directors_reports .last_table tr {
+  border-top: none;
+}
+
+#personal_room .personal_main .directors_reports .last_table tr th {
+  font-size: 16px !important;
+  height: 32px !important;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .last_table tr th {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    height: 25px !important;
+    padding: 3px;
+  }
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .directors_reports .last_table tr th {
+    font-size: 8px !important;
+    height: 18px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .last_table tr th {
+    font-size: 4px !important;
+    height: 10px !important;
+    padding: 0;
+  }
+}
+
 @media (max-width: 767px) {
   #personal_room .directors_main {
     padding-top: 0 !important;
@@ -5273,8 +5647,176 @@ header .burger_menu_personal .line3.show {
 @media (max-width: 1200px) {
   .personal_room {
     padding: 100px 0 40px !important;
-    height: 80vh !important;
+    min-height: 80vh !important;
   }
+}
+
+#calculator h1 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 49px;
+  color: #102543;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 576px) {
+  #calculator h1 {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+#calculator form .calc_checkbox {
+  max-width: 270px;
+  width: 100%;
+  padding-top: 7px;
+}
+
+#calculator form .calc_checkbox .checkox_div input {
+  opacity: 0;
+  visibility: hidden;
+  height: 14px;
+  position: absolute;
+}
+
+#calculator form .calc_checkbox .checkox_div input:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #102543;
+}
+
+#calculator form .calc_checkbox .checkox_div label {
+  font-weight: 600;
+  position: relative;
+  padding-left: 33px;
+}
+
+#calculator form .calc_checkbox .checkox_div label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+}
+
+#calculator form h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #102543;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 576px) {
+  #calculator form h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+#calculator form span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #EF5448;
+}
+
+#calculator form p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #102543;
+  margin: 7px 0;
+}
+
+#calculator form input,
+#calculator form select {
+  max-width: 250px;
+  height: 40px;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #102543;
+  padding: 0 7px;
+}
+
+#calculator form input:focus,
+#calculator form select:focus {
+  outline: none;
+}
+
+#calculator form input::-webkit-input-placeholder,
+#calculator form select::-webkit-input-placeholder {
+  color: #BFBFBF;
+}
+
+#calculator form input:-ms-input-placeholder,
+#calculator form select:-ms-input-placeholder {
+  color: #BFBFBF;
+}
+
+#calculator form input::-ms-input-placeholder,
+#calculator form select::-ms-input-placeholder {
+  color: #BFBFBF;
+}
+
+#calculator form input::placeholder,
+#calculator form select::placeholder {
+  color: #BFBFBF;
+}
+
+#calculator form select {
+  max-width: 655px;
+  width: 100%;
+  background: transparent;
+  margin: 20px 0 40px;
+}
+
+#calculator form h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #102543;
+  max-width: 525px;
+  margin: 20px 0;
+}
+
+#calculator form button {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background: #EF5448;
+  border: none;
+  border-radius: 3px;
+  width: 220px;
+  height: 50px;
+  text-transform: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#calculator form button:hover {
+  background: #102543;
 }
 
 footer {

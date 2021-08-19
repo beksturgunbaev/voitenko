@@ -99,6 +99,28 @@ $(document).ready(function() {
         $('.personal_menu').toggleClass('active');
     });
 
+// Отчеты:
+    $('.delete_icon').click(function() {
+        $('.delete_modal').addClass('active');
+        $('html').addClass('active');
+        $('.delete_content').addClass('active');
+    });
+    $('.name_icon').click(function() {
+        $('.delete_modal').addClass('active');
+        $('html').addClass('active');
+        $('.name_content').addClass('active');
+    });
+    $('.delete_modal .close').click(function() {
+        $('.delete_modal').removeClass('active');
+        $('html').removeClass('active');
+        $('.name_content').removeClass('active');
+    });
+    $('.delete_modal button').click(function() {
+        $('.delete_modal').removeClass('active');
+        $('html').removeClass('active');
+        $('.name_content').removeClass('active');
+    });
+
 // Input mask for telephone number:
     $('.phone_field').inputmask("phone", {
         placeholder: '#',

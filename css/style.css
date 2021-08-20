@@ -464,6 +464,7 @@ header .burger_menu_personal .line3.show {
   transition: .3s;
   -webkit-transform: translate(0, 10px);
           transform: translate(0, 10px);
+  text-align: right;
 }
 
 @media (max-width: 1200px) {
@@ -479,6 +480,7 @@ header .burger_menu_personal .line3.show {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: 0;
+    text-align: center;
   }
 }
 
@@ -3791,7 +3793,7 @@ header .burger_menu_personal .line3.show {
       -ms-flex-align: center;
           align-items: center;
   width: 248px;
-  height: 80px;
+  height: 50px;
 }
 
 #personal_room .personal_main .categories li a:hover {
@@ -5015,6 +5017,35 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+#personal_room .personal_main .directors_reports .participants_table .partic_green input {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid #102543;
+  background: #fff !important;
+}
+
+#personal_room .personal_main .directors_reports .participants_table .partic_green input:focus {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .participants_table .partic_green input {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+#personal_room .personal_main .directors_reports .participants_table ._width_70px input {
+  width: 70px;
+}
+
+@media (max-width: 767px) {
+  #personal_room .personal_main .directors_reports .participants_table ._width_70px input {
+    width: 30px;
+  }
+}
+
 @media (max-width: 1200px) {
   #personal_room .personal_main .directors_reports .participants_table svg {
     width: 16px !important;
@@ -5039,9 +5070,23 @@ header .burger_menu_personal .line3.show {
 
 #personal_room .personal_main .directors_reports .participants_table select {
   width: 100%;
-  height: 100%;
-  border: none;
-  background: transparent;
+  border: 1px solid #102543;
+  background: #D3FCC8;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .participants_table select {
+    width: auto;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .participants_table select {
+    padding: 3px 6px 3px 3px;
+  }
 }
 
 #personal_room .personal_main .directors_reports .participants_table select:focus {
@@ -5103,7 +5148,7 @@ header .burger_menu_personal .line3.show {
   font-size: 16px;
   line-height: 130%;
   color: #102543;
-  background: #fff;
+  background: #fff !important;
   margin: 4px 0;
   padding: 0 5px;
 }
@@ -5354,24 +5399,21 @@ header .burger_menu_personal .line3.show {
   }
 }
 
-#personal_room .personal_main .directors_reports .payment_table ._22px input {
-  max-width: 30px;
+#personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
+  width: 30px;
   height: 22px;
-  padding: 0 2px;
-  border-radius: 2px;
 }
 
 @media (max-width: 992px) {
-  #personal_room .personal_main .directors_reports .payment_table ._22px input {
-    max-width: 16px;
+  #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
+    width: 16px;
     height: 16px;
-    border: 1px solid #102543;
   }
 }
 
 @media (max-width: 767px) {
-  #personal_room .personal_main .directors_reports .payment_table ._22px input {
-    max-width: 9px;
+  #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
+    width: 9px;
     height: 9px;
   }
 }
@@ -5406,19 +5448,6 @@ header .burger_menu_personal .line3.show {
   #personal_room .personal_main .directors_reports .payment_table_two td {
     line-height: 7px !important;
     height: 18px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  #personal_room .personal_main .directors_reports .payment_table_two ._22px {
-    width: 22px;
-  }
-}
-
-@media (max-width: 576px) {
-  #personal_room .personal_main .directors_reports .payment_table_two ._22px input {
-    max-width: 12px !important;
-    height: 12px !important;
   }
 }
 
@@ -5463,17 +5492,24 @@ header .burger_menu_personal .line3.show {
   background: #102543;
 }
 
+@media (max-width: 1200px) {
+  #personal_room .personal_main .directors_reports .settings_table .download_btn button {
+    padding: 3px 3px 4px;
+  }
+}
+
 @media (max-width: 992px) {
   #personal_room .personal_main .directors_reports .settings_table .download_btn button {
     height: 22px;
-    padding-bottom: 1px;
+    padding: 3px 10px 4px;
   }
 }
 
 @media (max-width: 767px) {
   #personal_room .personal_main .directors_reports .settings_table .download_btn button {
-    font-size: 6px;
-    height: 16px;
+    font-size: 5px;
+    height: 12px;
+    padding: 0 5px 1px;
   }
 }
 
@@ -5545,11 +5581,18 @@ header .burger_menu_personal .line3.show {
 }
 
 #personal_room .personal_main .directors_reports .direc_txt_extra .table_name h5 {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #EF5448;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #102543;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  #personal_room .personal_main .directors_reports .direc_txt_extra .table_name h5 {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -5728,6 +5771,18 @@ header .burger_menu_personal .line3.show {
   .personal_room {
     padding: 100px 0 40px !important;
     min-height: 80vh !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .replac_products .products_block {
+    margin-top: 0 !important;
+  }
+  .replac_products h5 {
+    margin: 30px 0 !important;
+  }
+  .replac_products .prod_image {
+    margin-top: 30px !important;
   }
 }
 

@@ -384,6 +384,7 @@ header {
         opacity: 0;
         transition: .3s;
         transform: translate(0, 10px);
+        text-align: right;
         @include _1200px() {
             visibility: visible;
             opacity: 1;
@@ -394,6 +395,7 @@ header {
             max-width: 100%;
             box-shadow: none;
             border-radius: 0;
+            text-align: center;
         }
         &.active {
             visibility: visible;
@@ -2491,7 +2493,7 @@ header {
                     justify-content: center;
                     align-items: center;
                     width: 248px;
-                    height: 80px;
+                    height: 50px;
                     &:hover {
                         background: linear-gradient(90deg, #EE4747 0%, #F9C749 100%);
                         color: #fff;
@@ -3281,6 +3283,30 @@ header {
                         line-height: 5px !important;
                     }
                 }
+                .partic_green {
+                    input {
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        border: 1px solid #102543;
+                        background: #fff !important;
+                        &:focus {
+                            outline: none;
+                        }
+                        @include _767px() {
+                            width: 14px;
+                            height: 14px;
+                        }
+                    }
+                }
+                ._width_70px {
+                    input {
+                        width: 70px;
+                        @include _767px() {
+                            width: 30px;
+                        }
+                    }
+                }
                 svg {
                     @include _1200px() {
                         width: 16px !important;
@@ -3298,9 +3324,17 @@ header {
                 }
                 select {
                     width: 100%;
-                    height: 100%;
-                    border: none;
-                    background: transparent;
+                    border: 1px solid #102543;
+                    background: #D3FCC8;
+                    border-radius: 10px;
+                    padding: 4px;
+                    @include _1200px() {
+                        width: auto;
+                        border-radius: 4px;
+                    }
+                    @include _576px() {
+                        padding: 3px 6px 3px 3px;
+                    }
                     &:focus {
                         outline: none;
                     }
@@ -3340,7 +3374,7 @@ header {
                         border: 1px solid #D8D8D8;
                         border-radius: 3px;
                         @include desc(500, 16px, 130%, #102543);
-                        background: #fff;
+                        background: #fff !important;
                         margin: 4px 0;
                         padding: 0 5px;
                         &:focus {
@@ -3522,19 +3556,16 @@ header {
                         height: 8px !important;
                     }
                 }
-                ._22px {
+                .table_checkbox {
                     input {
-                        max-width: 30px;
+                        width: 30px;
                         height: 22px;
-                        padding: 0 2px;
-                        border-radius: 2px;
                         @include _992px() {
-                            max-width: 16px;
+                            width: 16px;
                             height: 16px;
-                            border: 1px solid #102543;
                         }
                         @include _767px() {
-                            max-width: 9px;
+                            width: 9px;
                             height: 9px;
                         }
                     }
@@ -3564,17 +3595,6 @@ header {
                         height: 18px !important;
                     }
                 }
-                ._22px {
-                    @include _767px() {
-                        width: 22px;
-                    }
-                    input {
-                        @include _576px() {
-                            max-width: 12px !important;
-                            height: 12px !important;
-                        }
-                    }
-                }
             }
             .settings_table {
                 th,
@@ -3593,13 +3613,17 @@ header {
                         &:hover {
                             background: #102543;
                         }
+                        @include _1200px() {
+                            padding: 3px 3px 4px;
+                        }
                         @include _992px() {
                             height: 22px;
-                            padding-bottom: 1px;
+                            padding: 3px 10px 4px;
                         }
                         @include _767px() {
-                            font-size: 6px;
-                            height: 16px;
+                            font-size: 5px;
+                            height: 12px;
+                            padding: 0 5px 1px;
                         }
                     }
                 }
@@ -3645,8 +3669,12 @@ header {
                 .table_name { 
                     width: 100%;
                     h5 {
-                        @include desc(600, 20px, 24px, #EF5448);
+                        @include desc(700, 24px, 29px, #102543);
                         text-align: center;
+                        @include _576px() {
+                            font-size: 20px;
+                            line-height: 24px;
+                        }
                     }
                 }
             }
@@ -3764,7 +3792,19 @@ header {
         min-height: 80vh !important;
     }
 }
-
+.replac_products {
+    @include _576px() {
+        .products_block {
+            margin-top: 0 !important;
+        }
+        h5 {
+            margin: 30px 0 !important;
+        }
+        .prod_image {
+            margin-top: 30px !important;
+        }
+    }
+}
 #calculator {
     h1 {
         @include title(900, 40px, 49px, #102543, uppercase);

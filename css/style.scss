@@ -2438,6 +2438,7 @@ header {
             @include _576px() {
                 font-size: 20px;
                 line-height: 24px;
+                margin: 10px 0 20px;
             }
         }
         .copy_container {
@@ -2474,7 +2475,7 @@ header {
                     background: #102543;
                 }
                 @include _576px() {
-                    margin-top: 14px;
+                    margin: 14px 0 0;
                 }
             }
         }
@@ -2531,6 +2532,8 @@ header {
                 @include _576px() {
                     font-size: 20px;
                     line-height: 24px;
+                    text-align: center;
+                    margin: 20px 0;
                 }
             }
             table {
@@ -2669,6 +2672,11 @@ header {
                         &:hover {
                             text-decoration: underline;
                         }
+                    }
+                    @include _576px() {
+                        max-width: 100%;
+                        margin: 0 auto;
+                        text-align: center !important;
                     }
                 }
                 .mini_inputs {
@@ -2861,7 +2869,7 @@ header {
                 @include buttons(700, 16px, #fff, #102543, none, 3px, 260px, 50px, none);
                 margin-bottom: 40px;
                 @include _1200px() {
-                    margin: 40px 0;
+                    margin: 30px auto;
                 }
                 &:hover {
                     background: #EF5448;
@@ -2875,14 +2883,14 @@ header {
                 }
             }
             .right_block {
-                @include _576px() {
-                    position: relative;
-                    padding-top: 80px;
-                }
                 .how_to_do {
                     @include _576px() {
                         position: absolute;
                         top: 0;
+                        width: 93%;
+                        a {
+                            width: 100%;
+                        }
                     }
                     a {
                         @include desc(700, 18px, 22px, #EF5448);
@@ -2890,6 +2898,12 @@ header {
                             text-decoration: underline;
                         }
                     }
+                }
+            }
+            .right_block_extra {
+                @include _576px() {
+                    position: relative;
+                    padding-top: 70px;
                 }
             }
             .woman_body {
@@ -2945,7 +2959,24 @@ header {
                 }
             }
         }
+        .measurements_block_extra {
+            .personal_container {
+                @include _576px() {
+                    position: relative;
+                    padding-top: 50px;
+                    h6 {
+                        padding: 20px 0 0 !important;
+                    }
+                }
+            }
+        }
         .my_trainings {
+            h5 {
+                @include _576px() {
+                    margin: 40px 0 !important;
+                    padding: 0 !important;
+                }
+            }
             button {
                 @include buttons(700, 16px, #fff, #EF5448, none, 3px, 200px, 60px, none);
                 margin: 90px auto 0;
@@ -2966,6 +2997,11 @@ header {
             .personal_container {
                 .daily_desc {
                     max-width: 490px;
+                }
+                button {
+                    @include _576px() {
+                        margin: 0 auto !important;
+                    }
                 }
             }
         }
@@ -3101,6 +3137,22 @@ header {
                     .mini_txt {
                         font-size: 14px;
                         line-height: 17px;
+                        textarea {
+                            border: 1px solid #102543;
+                            width: 100%;
+                            resize: none;
+                            border-radius: 7px;
+                            padding: 3px 7px;
+                            background: transparent;
+                            &:focus {
+                                outline: none;
+                            }
+                            @include _767px() {
+                                width: 98%;
+                                display: flex;
+                                margin: 0 auto;
+                            }
+                        }
                         @include _1200px() {
                             font-size: 12px;
                             line-height: 15px;
@@ -3219,6 +3271,14 @@ header {
                     margin: 2rem 0 1rem !important;
                 }
             }
+            .direc_txt {
+                @include _992px() {
+                    padding-top: .5rem !important;
+                    h6 {
+                        margin-top: 0 !important;
+                    }
+                }
+            }
             .mobile_show_btn {
                 display: none !important;
                 @include _1200px() {
@@ -3318,8 +3378,8 @@ header {
                         margin: 0 2px;
                     }
                     @include _576px() {
-                        width: 5px !important;
-                        height: 5px !important;
+                        width: 8px !important;
+                        height: 8px !important;
                     }
                 }
                 select {
@@ -3541,7 +3601,6 @@ header {
                         padding: 0 2px;
                         text-align: center;
                         @include _576px() {
-                            max-width: 0;
                             padding: 0;
                         }
                     }
@@ -3596,6 +3655,29 @@ header {
                     }
                 }
             }
+            .paym_three {
+                @include _576px() {
+                    th {
+                        width: 0 !important;
+                        font-size: 5px !important;
+                    }
+                    td {
+                        width: 0 !important;
+                    }
+                }
+                td {
+                    input,
+                    select {
+                        @include _992px() {
+                            border: 1px solid #102543 !important;
+                            border-radius: 4px !important;
+                        }
+                        @include _576px() {
+                            height: 16px !important;
+                        }
+                    }
+                }
+            }
             .settings_table {
                 th,
                 td {
@@ -3629,14 +3711,6 @@ header {
                 }
             }
             .last_table {
-                max-width: 70%;
-                margin: 0 auto;
-                @include _1400px() {
-                    max-width: 80%;
-                }
-                @include _992px() {
-                    max-width: 83%;
-                }
                 tr {
                     border-top: none;
                     th {
@@ -3771,7 +3845,19 @@ header {
                         }
                     }
                 }
+                .w-100_extra {
+                    @include _576px() {
+                        max-height: 77px;
+                    }
+                }
             }
+        }
+    }
+}
+.my_menu {
+    .mt-5 {
+        @include _576px() {
+            margin-top: 6px !important;
         }
     }
 }

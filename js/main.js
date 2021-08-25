@@ -121,6 +121,15 @@ $(document).ready(function() {
         $('.name_content').removeClass('active');
     });
 
+    $('.third_svg').click(function() {
+        $('.table_modal').addClass('active');
+        $('html').addClass('active');
+    });
+    $('.table_modal span').click(function() {
+        $('.table_modal').removeClass('active');
+        $('html').removeClass('active');
+    });
+
 // Input mask for telephone number:
     $('.phone_field').inputmask("phone", {
         placeholder: '#',
@@ -210,4 +219,21 @@ function goResult() {
 // Переход на страницу Магазин:
 function goOnlineShop() {
     window.location = 'online-shop.html';
+}
+
+// Проверка на rafio buttins:
+
+let radioBtn = document.querySelectorAll('.check_input');
+let checkField = document.querySelector('.check_field');
+
+for(let i = 0; i < radioBtn.length; i++) {
+    radioBtn[i].onclick = function() {
+        if(this.innerText == 'Нет') {
+            checkField.setAttribute("disabled", "disabled");
+            checkField.value = 'Нет';
+        } else {
+            checkField.removeAttribute("disabled", "disabled");
+            checkField.value = '';
+        }
+    }
 }

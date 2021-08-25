@@ -6004,7 +6004,7 @@ header .burger_menu_personal .line3.show {
 
 @media (max-width: 576px) {
   .no_padding_mob .container {
-    padding: 0 !important;
+    padding: 0 5px !important;
   }
   .no_padding_mob .container h6, .no_padding_mob .container h5, .no_padding_mob .container form, .no_padding_mob .container .daily_desc, .no_padding_mob .container .copy_container {
     padding-left: 10px;

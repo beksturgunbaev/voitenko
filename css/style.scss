@@ -3953,7 +3953,7 @@ header {
 .no_padding_mob {
     .container {
         @include _576px() {
-            padding: 0 !important;
+            padding: 0 5px !important;
             h6,h5, form, .daily_desc, .copy_container {
                 padding-left: 10px;
                 padding-right: 10px;

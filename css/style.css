@@ -6413,6 +6413,7 @@ header .burger_menu_personal .line3.show {
   color: #102543;
   margin: 10px;
   padding: 7px 12px;
+  background: transparent !important;
 }
 
 .table_modal .content select:focus {

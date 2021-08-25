@@ -4217,6 +4217,7 @@ header {
             @include desc(500, 16px, 20px, #102543);
             margin: 10px;
             padding: 7px 12px;
+            background: transparent !important;
             &:focus {
                 outline: none;
             }

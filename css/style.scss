@@ -10,6 +10,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 * {
     padding: 0;
@@ -2906,6 +2907,11 @@ header {
                 margin: 30px 0;
                 &:hover {
                     background: #EF5448;
+                }
+            }
+            .measurements_link {
+                @include _992px() {
+                    margin: 30px auto;
                 }
             }
             form {

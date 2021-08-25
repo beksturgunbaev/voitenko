@@ -11,6 +11,7 @@ html.active {
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -4476,6 +4477,12 @@ header .burger_menu_personal .line3.show {
 
 #personal_room .personal_main .measurements_block .measurements_link:hover {
   background: #EF5448;
+}
+
+@media (max-width: 992px) {
+  #personal_room .personal_main .measurements_block .measurements_link {
+    margin: 30px auto;
+  }
 }
 
 #personal_room .personal_main .measurements_block form input::-webkit-input-placeholder {

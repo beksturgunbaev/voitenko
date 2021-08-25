@@ -6383,7 +6383,7 @@ header .burger_menu_personal .line3.show {
 
 @media (max-width: 576px) {
   .table_modal .content {
-    padding: 20px 10px;
+    padding: 40px 10px 20px;
   }
 }
 

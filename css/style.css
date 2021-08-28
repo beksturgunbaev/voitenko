@@ -2231,6 +2231,12 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+#online_shop .shop_block .shop_container .shop_card_block .shop_card .stock_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #online_shop .shop_block .shop_container .shop_card_block .shop_card .card_cost {
   font-weight: 900;
   font-size: 28px;
@@ -2246,6 +2252,22 @@ header .burger_menu_personal .line3.show {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+#online_shop .shop_block .shop_container .shop_card_block .shop_card .stock_cost {
+  background-image: url(../img/online-shop/stock.png) !important;
+  color: #102543;
+  position: relative;
+}
+
+#online_shop .shop_block .shop_container .shop_card_block .shop_card .stock_cost span {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: line-through;
 }
 
 #online_shop .shop_block .shop_container .shop_card_block .shop_card h3 {

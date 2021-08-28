@@ -1511,6 +1511,11 @@ header {
                         bottom: -50px !important;
                     }
                 }
+                .stock_img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
                 .card_cost {
                     @include desc(900, 28px, 130%, #fff);
                     text-align: center;
@@ -1523,6 +1528,20 @@ header {
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
+                    position: relative;
+                }
+                .stock_cost {
+                    background-image: url(../img/online-shop/stock.png) !important;
+                    color: #102543;
+                    position: relative;
+                    span {
+                        position: absolute;
+                        bottom: 15px;
+                        right: 30px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-decoration: line-through;
+                    }
                 }
                 h3 {
                     @include desc(900, 28px, 34px, #102543);

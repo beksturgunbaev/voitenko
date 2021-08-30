@@ -48,10 +48,8 @@ $(document).ready(function() {
     if($(window).width() < 992 && $(window).width() > 576) {
         $('.card_parent').addClass('card_slider');
     }
- 
 
-
-
+    // Проверка на rafio buttons:
     $('.check_input').click(function() {
         if($(this).text() == "Нет") {
             $('.check_field').val("Нет");
@@ -61,10 +59,6 @@ $(document).ready(function() {
             $('.check_field').attr("disabled", false);
         }
     });
-
-
-
-
 
     // Card's slider:
     $('.card_slider').slick({
@@ -236,21 +230,3 @@ function goResult() {
 function goOnlineShop() {
     window.location = 'online-shop.html';
 }
-
-// Проверка на rafio buttons:
-
-// let radioBtn = document.querySelectorAll('.check_input');
-// let checkField = document.querySelector('.check_field');
-
-// for(let i = 0; i < radioBtn.length; i++) {
-//     radioBtn[i].onclick = function() {
-//         if(this.innerText == 'Нет') {
-//             checkField.setAttribute("disabled", "disabled");
-//             checkField.value = 'Нет';
-//         } else {
-//             checkField.removeAttribute("disabled", "disabled");
-//             checkField.value = '';
-//         }
-//     }
-// }
-

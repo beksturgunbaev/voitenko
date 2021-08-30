@@ -3876,11 +3876,16 @@ header .burger_menu_personal .line3.show {
   text-align: left;
 }
 
+@media (max-width: 767px) {
+  #personal_room .personal_main .categories_block h5 {
+    text-align: center;
+  }
+}
+
 @media (max-width: 576px) {
   #personal_room .personal_main .categories_block h5 {
     font-size: 20px;
     line-height: 24px;
-    text-align: center;
     margin: 20px 0;
   }
 }
@@ -4108,6 +4113,10 @@ header .burger_menu_personal .line3.show {
 #personal_room .personal_main .categories_block .personal_container select,
 #personal_room .personal_main .categories_block .personal_container label {
   font-weight: 500 !important;
+}
+
+#personal_room .personal_main .categories_block .personal_container .red_border {
+  border: 1px solid #EF5448;
 }
 
 #personal_room .personal_main .categories_block .personal_container textarea {
@@ -5196,6 +5205,10 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+#personal_room .personal_main .directors_reports .participants_table .w_240px {
+  width: 240px;
+}
+
 #personal_room .personal_main .directors_reports .participants_table td {
   font-weight: 500 !important;
   font-size: 14px !important;
@@ -5245,12 +5258,14 @@ header .burger_menu_personal .line3.show {
   }
 }
 
-#personal_room .personal_main .directors_reports .participants_table ._width_70px input {
-  width: 70px;
+#personal_room .personal_main .directors_reports .participants_table .width_full input {
+  width: 100%;
+  border: 1px soli #102543;
+  border-radius: 3px;
 }
 
 @media (max-width: 767px) {
-  #personal_room .personal_main .directors_reports .participants_table ._width_70px input {
+  #personal_room .personal_main .directors_reports .participants_table .width_full input {
     width: 30px;
   }
 }
@@ -5483,6 +5498,7 @@ header .burger_menu_personal .line3.show {
   border: 1px solid #102543;
   border-radius: 10px;
   height: 100%;
+  width: 100%;
   padding: 0 10px;
 }
 
@@ -5634,22 +5650,28 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+#personal_room .personal_main .directors_reports .payment_table .table_checkbox {
+  padding: 0;
+  text-align: center;
+}
+
 #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
-  width: 30px;
-  height: 22px;
+  width: 35px;
+  height: 25px;
 }
 
 @media (max-width: 992px) {
   #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 767px) {
   #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
-    width: 9px;
-    height: 9px;
+    width: 14px;
+    height: 14px;
+    margin: 0 2px;
   }
 }
 
@@ -5945,7 +5967,7 @@ header .burger_menu_personal .line3.show {
   padding-right: 5px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1400px) {
   #personal_room .personal_datas form .datas_block .w-100 p {
     font-size: 15px;
   }
@@ -5974,12 +5996,19 @@ header .burger_menu_personal .line3.show {
   padding: 7px 10px;
 }
 
+@media (max-width: 1400px) {
+  #personal_room .personal_datas form .datas_block .w-100 input,
+  #personal_room .personal_datas form .datas_block .w-100 textarea,
+  #personal_room .personal_datas form .datas_block .w-100 select {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 576px) {
   #personal_room .personal_datas form .datas_block .w-100 input,
   #personal_room .personal_datas form .datas_block .w-100 textarea,
   #personal_room .personal_datas form .datas_block .w-100 select {
-    font-size: 15px;
-    width: 100%;
     height: 35px;
   }
 }

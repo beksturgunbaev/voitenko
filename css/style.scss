@@ -2558,10 +2558,12 @@ header {
                 @include desc(700, 24px, 29px, #102543);
                 margin: 30px 0 40px;
                 text-align: left;
+                @include _767px() {
+                    text-align: center;
+                }
                 @include _576px() {
                     font-size: 20px;
                     line-height: 24px;
-                    text-align: center;
                     margin: 20px 0;
                 }
             }
@@ -2693,6 +2695,9 @@ header {
                 select,
                 label {
                     font-weight: 500 !important;
+                }
+                .red_border {
+                    border: 1px solid #EF5448;
                 }
                 textarea {
                     border: 1px solid #D8D8D8;
@@ -3411,6 +3416,9 @@ header {
                         width: auto !important;
                     }
                 }
+                .w_240px {
+                    width: 240px;
+                }
                 td {
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -3447,9 +3455,11 @@ header {
                         }
                     }
                 }
-                ._width_70px {
+                .width_full {
                     input {
-                        width: 70px;
+                        width: 100%;
+                        border: 1px soli #102543;
+                        border-radius: 3px;
                         @include _767px() {
                             width: 30px;
                         }
@@ -3625,6 +3635,7 @@ header {
                         border: 1px solid #102543;
                         border-radius: 10px;
                         height: 100%;
+                        width: 100%;
                         padding: 0 10px;
                         &:focus {
                             outline: none;
@@ -3725,16 +3736,19 @@ header {
                     }
                 }
                 .table_checkbox {
+                    padding: 0;
+                    text-align: center;
                     input {
-                        width: 30px;
-                        height: 22px;
+                        width: 35px;
+                        height: 25px;
                         @include _992px() {
-                            width: 16px;
-                            height: 16px;
+                            width: 20px;
+                            height: 20px;
                         }
                         @include _767px() {
-                            width: 9px;
-                            height: 9px;
+                            width: 14px;
+                            height: 14px;
+                            margin: 0 2px;
                         }
                     }
                 }
@@ -3934,7 +3948,7 @@ header {
                         margin: 0;
                         text-align: left;
                         padding-right: 5px;
-                        @include _576px() {
+                        @include _1400px() {
                             font-size: 15px;
                         }
                         @include _360px() {
@@ -3952,9 +3966,11 @@ header {
                         @include desc(400, 16px, 20px, #102543);
                         width: 200px;
                         padding: 7px 10px;
-                        @include _576px() {
-                            font-size: 15px;
+                        @include _1400px() {
                             width: 100%;
+                            font-size: 15px;
+                        }
+                        @include _576px() {
                             height: 35px;
                         }
                         @include _360px() {

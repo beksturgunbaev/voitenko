@@ -1,6 +1,6 @@
 // ==============================>  JQUERY  <==============================
-$(document).ready(function() {
-// Testimonial's slider:
+$(document).ready(function() {  
+    // Testimonial's slider:
     $('.slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -50,7 +50,23 @@ $(document).ready(function() {
     }
  
 
-// Card's slider:
+
+
+    $('.check_input').click(function() {
+        if($(this).text() == "Нет") {
+            $('.check_field').val("Нет");
+            $('.check_field').attr("disabled", true);
+        } else {
+            $('.check_field').val("");
+            $('.check_field').attr("disabled", false);
+        }
+    });
+
+
+
+
+
+    // Card's slider:
     $('.card_slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -62,7 +78,7 @@ $(document).ready(function() {
         nextArrow: '<img class="next_btn" src="img/arrow-right.png"/>',
     });
     
-// Mobile menu:
+    // Mobile menu:
     $('.burger_menu').click(function() {
         $('.mobile_menu').toggleClass('active');
         $('.line1').toggleClass('show');
@@ -79,7 +95,7 @@ $(document).ready(function() {
         $('html').toggleClass('active');
     });
 
-// Click на сбербанк:
+    // Click на сбербанк:
     $('.sberbank').click(function(e) {
         e.preventDefault();
         $('.whatsapp_modal').addClass('active');
@@ -88,18 +104,18 @@ $(document).ready(function() {
         $('.whatsapp_modal').removeClass('active');
     });
 
-// Калькулятор замен продуктов:
+    // Калькулятор замен продуктов:
     $('.product_img').click(function() {
         $('.product_img').removeClass('active');
         $(this).addClass('active');
     });
 
-// CLick to icon settings:
+    // CLick to icon settings:
     $('.settings_icon').click(function(e) {
         $('.personal_menu').toggleClass('active');
     });
 
-// Отчеты:
+    // Отчеты:
     $('.delete_icon').click(function() {
         $('.delete_modal').addClass('active');
         $('html').addClass('active');
@@ -130,13 +146,13 @@ $(document).ready(function() {
         $('html').removeClass('active');
     });
 
-// Input mask for telephone number:
+    // Input mask for telephone number:
     $('.phone_field').inputmask("phone", {
         placeholder: '#',
         showMaskOnHover: false,
     });
         
-        Inputmask.extendAliases({
+    Inputmask.extendAliases({
         my_phone: {
             alias: "abstractphone",
             phoneCodes: [{
@@ -221,19 +237,20 @@ function goOnlineShop() {
     window.location = 'online-shop.html';
 }
 
-// Проверка на rafio buttins:
+// Проверка на rafio buttons:
 
-let radioBtn = document.querySelectorAll('.check_input');
-let checkField = document.querySelector('.check_field');
+// let radioBtn = document.querySelectorAll('.check_input');
+// let checkField = document.querySelector('.check_field');
 
-for(let i = 0; i < radioBtn.length; i++) {
-    radioBtn[i].onclick = function() {
-        if(this.innerText == 'Нет') {
-            checkField.setAttribute("disabled", "disabled");
-            checkField.value = 'Нет';
-        } else {
-            checkField.removeAttribute("disabled", "disabled");
-            checkField.value = '';
-        }
-    }
-}
+// for(let i = 0; i < radioBtn.length; i++) {
+//     radioBtn[i].onclick = function() {
+//         if(this.innerText == 'Нет') {
+//             checkField.setAttribute("disabled", "disabled");
+//             checkField.value = 'Нет';
+//         } else {
+//             checkField.removeAttribute("disabled", "disabled");
+//             checkField.value = '';
+//         }
+//     }
+// }
+

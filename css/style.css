@@ -444,11 +444,17 @@ header .burger_menu_personal .line3.show {
 }
 
 .authorized_header .sign_in_authorized {
-  margin-left: 50px !important;
+  margin-left: 0 !important;
 }
 
 .authorized_header .sign_in_authorized a {
   padding: 14px 20px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 240px;
+  width: 100%;
+  overflow: hidden;
 }
 
 @media (max-width: 1400px) {

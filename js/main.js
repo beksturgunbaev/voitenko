@@ -50,14 +50,27 @@ $(document).ready(function() {
     }
 
     // Проверка на rafio buttons:
-    $('.check_input').click(function() {
-        if($(this).text() == "Нет") {
-            $('.check_field').val("Нет");
-            $('.check_field').attr("disabled", true);
-        } else {
+    $('.check_input_no').click(function() {
+        $('.input_checking_yes').prop('checked', false);
+        if($('.input_checking_no').is(':checked')) {
             $('.check_field').val("");
             $('.check_field').attr("disabled", false);
+        } else {
+            $('.check_field').val("Нет");
+            $('.check_field').attr("disabled", true);
         }
+    });
+    $('.input_checking_yes').click(function() {
+        $('.input_checking_no').prop('checked', false);
+        $('.check_field').val("");
+        $('.check_field').attr("disabled", false);
+    });
+
+    $('.checking_checkbox_two').click(function() {
+        $('.input_checking_one').prop('checked', false);
+    });
+    $('.checking_checkbox_one').click(function() {
+        $('.input_checking_two').prop('checked', false);
     });
 
     // Card's slider:

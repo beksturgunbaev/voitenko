@@ -298,6 +298,7 @@ header {
                 border-radius: 50px;
                 padding: 14px 42px;
                 transition: .3s;
+                text-align: center;
                 &:hover {
                     background: #EF5448;
                     color: #fff;
@@ -3743,16 +3744,25 @@ header {
                     padding: 0;
                     text-align: center;
                     input {
-                        width: 35px;
-                        height: 25px;
+                        max-width: 35px;
+                        max-height: 25px;
+                        min-width: 35px;
+                        min-height: 25px;
+                        padding: 0 !important;
+                        width: 100%;
+                        height: 100%;
                         @include _992px() {
-                            width: 20px;
-                            height: 20px;
+                            max-width: 20px;
+                            max-height: 20px;
+                            min-width: 20px;
+                            min-height: 20px;
+                            margin: 0 2px;
                         }
                         @include _767px() {
-                            width: 14px;
-                            height: 14px;
-                            margin: 0 2px;
+                            max-width: 14px;
+                            max-height: 14px;
+                            min-width: 14px;
+                            min-height: 14px;
                         }
                     }
                 }

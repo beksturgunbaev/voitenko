@@ -5663,31 +5663,26 @@ header .burger_menu_personal .line3.show {
 }
 
 #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
-  max-width: 35px;
-  max-height: 25px;
-  min-width: 35px;
-  min-height: 25px;
   padding: 0 !important;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 11px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 @media (max-width: 992px) {
   #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
-    max-width: 20px;
-    max-height: 20px;
-    min-width: 20px;
-    min-height: 20px;
-    margin: 0 2px;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   #personal_room .personal_main .directors_reports .payment_table .table_checkbox input {
-    max-width: 14px;
-    max-height: 14px;
-    min-width: 14px;
-    min-height: 14px;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    margin: 0 2px;
   }
 }
 

@@ -72,6 +72,13 @@ $(document).ready(function() {
     $('.checking_checkbox_one').click(function() {
         $('.input_checking_two').prop('checked', false);
     });
+    $('.table_checkbox_one').click(function() {
+        $('.table_checkbox_two input').prop('checked', false);
+    });
+    $('.table_checkbox_two').click(function() {
+        $('.table_checkbox_one input').prop('checked', false);
+    });
+
 
     // Card's slider:
     $('.card_slider').slick({

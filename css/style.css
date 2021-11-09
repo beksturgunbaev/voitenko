@@ -933,6 +933,12 @@ header .burger_menu_personal .line3.show {
   margin: 5rem 0 4rem;
 }
 
+@media (max-width: 767px) {
+  #what_wait .header-title {
+    margin: 3rem 0 3rem;
+  }
+}
+
 #what_wait .header-title h2::before {
   content: 'ЧТО ВАС ЖДЁТ';
 }
@@ -1054,8 +1060,26 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+@media (max-width: 767px) {
+  #costs {
+    padding-top: 0 !important;
+  }
+}
+
 #costs .header-title h2::before {
   content: 'Пакеты';
+}
+
+@media (max-width: 767px) {
+  #costs .header-title h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  #costs .card_parent {
+    margin-top: 0 !important;
+  }
 }
 
 #costs .card_parent .cost_card {
@@ -1474,6 +1498,12 @@ header .burger_menu_personal .line3.show {
 
 #testimonials {
   padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  #testimonials {
+    padding-top: 60px;
+  }
 }
 
 #testimonials .header-title h2::before {
@@ -2571,12 +2601,24 @@ header .burger_menu_personal .line3.show {
   text-decoration: underline;
 }
 
-#oformlenie .payment_method a {
+#oformlenie .payment_method .payment_method_item {
+  cursor: pointer;
+  opacity: .6;
+  -webkit-transition: .2s;
+  transition: .2s;
   margin-right: 20px;
   text-align: center;
 }
 
-#oformlenie .payment_method a p {
+#oformlenie .payment_method .payment_method_item:hover {
+  opacity: 1;
+}
+
+#oformlenie .payment_method .payment_method_item.choose_payment {
+  opacity: 1;
+}
+
+#oformlenie .payment_method .payment_method_item p {
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -6443,6 +6485,20 @@ header .burger_menu_personal .line3.show {
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #dbd9d9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9c9b9b;
+  border-radius: 20px;
+}
+
+​
 .table_modal {
   position: fixed;
   top: 0;
@@ -6459,6 +6515,7 @@ header .burger_menu_personal .line3.show {
           transform: scale(1.2);
 }
 
+​
 .table_modal.active {
   visibility: visible;
   opacity: 1;
@@ -6466,6 +6523,7 @@ header .burger_menu_personal .line3.show {
           transform: scale(1);
 }
 
+​
 .table_modal .content {
   position: absolute;
   top: 50%;
@@ -6475,15 +6533,19 @@ header .burger_menu_personal .line3.show {
   background: #FFFFFF;
   border-radius: 5px;
   padding: 30px 50px 30px 30px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 @media (max-width: 576px) {
-  .table_modal .content {
+  ​
+.table_modal .content {
     padding: 40px 10px 20px;
     width: 95%;
   }
 }
 
+​
 .table_modal .content span {
   cursor: pointer;
   position: absolute;
@@ -6503,6 +6565,7 @@ header .burger_menu_personal .line3.show {
           align-items: center;
 }
 
+​
 .table_modal .content select {
   font-weight: 500;
   font-size: 16px;
@@ -6513,6 +6576,7 @@ header .burger_menu_personal .line3.show {
   background: transparent !important;
 }
 
+​
 .table_modal .content select:focus {
   outline: none;
 }

@@ -160,21 +160,17 @@ $(document).ready(function() {
         $('html').removeClass('active');
     });
 
-    // Input mask for telephone number:
-    $('.phone_field').inputmask("phone", {
-        placeholder: '#',
-        showMaskOnHover: false,
+    // ALlow for input type tel only numbers and :
+    $('input[type="tel"]').click(function() {
+        var $input = $(this);
+        $input.val($input.val().replace(/[^\d]+/g,''));
     });
-        
-    Inputmask.extendAliases({
-        my_phone: {
-            alias: "abstractphone",
-            phoneCodes: [{
-            mask: "+7(###) ###-##-##",
-            }],
-        }
+
+    // Choose payment method:
+    $('.payment_method_item').on('click', function() {
+        $('.payment_method_item').removeClass('choose_payment');
+        $(this).addClass('choose_payment');
     });
-    $('.phone_field').inputmask("my_phone");
 });
 
 

@@ -740,6 +740,10 @@ header .burger_menu_personal .line3.show {
   margin-left: -50px;
 }
 
+#main .main_img img {
+  max-width: 100%;
+}
+
 @media (max-width: 1400px) {
   #main .main_img {
     margin-left: 0;
@@ -6485,20 +6489,6 @@ header .burger_menu_personal .line3.show {
   cursor: pointer;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-track-piece {
-  background: #dbd9d9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #9c9b9b;
-  border-radius: 20px;
-}
-
-​
 .table_modal {
   position: fixed;
   top: 0;
@@ -6515,7 +6505,6 @@ header .burger_menu_personal .line3.show {
           transform: scale(1.2);
 }
 
-​
 .table_modal.active {
   visibility: visible;
   opacity: 1;
@@ -6523,7 +6512,6 @@ header .burger_menu_personal .line3.show {
           transform: scale(1);
 }
 
-​
 .table_modal .content {
   position: absolute;
   top: 50%;
@@ -6535,17 +6523,16 @@ header .burger_menu_personal .line3.show {
   padding: 30px 50px 30px 30px;
   max-height: 90vh;
   overflow-y: auto;
+  z-index: 111;
 }
 
 @media (max-width: 576px) {
-  ​
-.table_modal .content {
+  .table_modal .content {
     padding: 40px 10px 20px;
     width: 95%;
   }
 }
 
-​
 .table_modal .content span {
   cursor: pointer;
   position: absolute;
@@ -6565,7 +6552,6 @@ header .burger_menu_personal .line3.show {
           align-items: center;
 }
 
-​
 .table_modal .content select {
   font-weight: 500;
   font-size: 16px;
@@ -6576,7 +6562,6 @@ header .burger_menu_personal .line3.show {
   background: transparent !important;
 }
 
-​
 .table_modal .content select:focus {
   outline: none;
 }

@@ -544,6 +544,9 @@ header {
     }
     .main_img {
         margin-left: -50px;
+        img {
+            max-width: 100%;
+        }
         @include _1400px() {
             margin-left: 0;
         }
@@ -4268,16 +4271,7 @@ header {
         cursor: pointer;
     }
 }
-::-webkit-scrollbar {
-    width: 4px;
-}
-::-webkit-scrollbar-track-piece {
-    background: #dbd9d9
-}
-::-webkit-scrollbar-thumb {
-    background: #9c9b9b;
-    border-radius: 20px;
-}​
+
 
 .table_modal {
     position: fixed;
@@ -4306,6 +4300,7 @@ header {
         padding: 30px 50px 30px 30px;
         max-height: 90vh;
         overflow-y: auto;
+        z-index: 111;
         @include _576px() {
             padding: 40px 10px 20px;
             width: 95%;

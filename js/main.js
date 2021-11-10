@@ -72,13 +72,6 @@ $(document).ready(function() {
     $('.checking_checkbox_one').click(function() {
         $('.input_checking_two').prop('checked', false);
     });
-    $('.table_checkbox_one').click(function() {
-        $('.table_checkbox_two input').prop('checked', false);
-    });
-    $('.table_checkbox_two').click(function() {
-        $('.table_checkbox_one input').prop('checked', false);
-    });
-
 
     // Card's slider:
     $('.card_slider').slick({
@@ -171,10 +164,22 @@ $(document).ready(function() {
         $('.payment_method_item').removeClass('choose_payment');
         $(this).addClass('choose_payment');
     });
+    //  Close the modal
+   jQuery(function($){
+	$(document).mouseup(function (e){ 
+		var div = $(".content"); 
+		if (!div.is(e.target) 
+		    && div.has(e.target).length === 0) {
+                $('.table_modal').removeClass('active');
+                $('html').removeClass('active');
+            }
+        });
+    });
 });
 
 
 // ==================================>    VANILLA JS <=======================================
+
 // Accordion:
 const acc = document.getElementsByClassName("acc_btn");
 

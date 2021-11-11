@@ -2670,6 +2670,9 @@ header {
                         font-size: 10px;
                         line-height: 12px;
                     }
+                    svg {
+                        width: 18px !important;
+                    }
                 }
                 @include _576px() {
                     display: none !important;
@@ -4372,6 +4375,8 @@ header {
                 height: 40px;
                 border: 1px solid #D8D8D8;
                 border-radius: 3px;
+                padding-left: 7px;
+                padding-right: 7px;
                 &:focus {
                     outline: none;
                 }

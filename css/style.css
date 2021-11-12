@@ -740,6 +740,10 @@ header .burger_menu_personal .line3.show {
   margin-left: -50px;
 }
 
+#main .main_img img {
+  max-width: 100%;
+}
+
 @media (max-width: 1400px) {
   #main .main_img {
     margin-left: 0;
@@ -933,6 +937,12 @@ header .burger_menu_personal .line3.show {
   margin: 5rem 0 4rem;
 }
 
+@media (max-width: 767px) {
+  #what_wait .header-title {
+    margin: 3rem 0 3rem;
+  }
+}
+
 #what_wait .header-title h2::before {
   content: 'ЧТО ВАС ЖДЁТ';
 }
@@ -1054,8 +1064,26 @@ header .burger_menu_personal .line3.show {
   }
 }
 
+@media (max-width: 767px) {
+  #costs {
+    padding-top: 0 !important;
+  }
+}
+
 #costs .header-title h2::before {
   content: 'Пакеты';
+}
+
+@media (max-width: 767px) {
+  #costs .header-title h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  #costs .card_parent {
+    margin-top: 0 !important;
+  }
 }
 
 #costs .card_parent .cost_card {
@@ -1474,6 +1502,12 @@ header .burger_menu_personal .line3.show {
 
 #testimonials {
   padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  #testimonials {
+    padding-top: 60px;
+  }
 }
 
 #testimonials .header-title h2::before {
@@ -2571,12 +2605,24 @@ header .burger_menu_personal .line3.show {
   text-decoration: underline;
 }
 
-#oformlenie .payment_method a {
+#oformlenie .payment_method .payment_method_item {
+  cursor: pointer;
+  opacity: .6;
+  -webkit-transition: .2s;
+  transition: .2s;
   margin-right: 20px;
   text-align: center;
 }
 
-#oformlenie .payment_method a p {
+#oformlenie .payment_method .payment_method_item:hover {
+  opacity: 1;
+}
+
+#oformlenie .payment_method .payment_method_item.choose_payment {
+  opacity: 1;
+}
+
+#oformlenie .payment_method .payment_method_item p {
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -4035,6 +4081,10 @@ header .burger_menu_personal .line3.show {
     font-size: 10px;
     line-height: 12px;
   }
+}
+
+#personal_room .personal_main .categories_block .measurements-table td svg {
+  width: 18px !important;
 }
 
 @media (max-width: 576px) {
@@ -6475,6 +6525,9 @@ header .burger_menu_personal .line3.show {
   background: #FFFFFF;
   border-radius: 5px;
   padding: 30px 50px 30px 30px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 111;
 }
 
 @media (max-width: 576px) {
@@ -6592,6 +6645,8 @@ header .burger_menu_personal .line3.show {
   height: 40px;
   border: 1px solid #D8D8D8;
   border-radius: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 #sign_in .mobile_order .sign_in_block input:focus {

@@ -3595,20 +3595,16 @@ header {
             }
             .results_table {
                 th {
-                    @include _1200px() {
-                        font-size: 16px !important;
-                        line-height: 20px !important;
-                    }
+                    font-size: 12px !important;
+                    line-height: 16px !important;
                     @include _576px() {
                         font-size: 8px !important;
                         line-height: 10px !important;
                     }
                 }
                 td {
-                    @include _1200px() {
-                        font-size: 16px !important;
-                        line-height: 20px !important;
-                    }
+                    font-size: 12px !important;
+                    line-height: 14px !important;
                     @include _576px() {
                         font-size: 8px !important;
                         line-height: 10px !important;
@@ -4301,8 +4297,7 @@ header {
         background: #FFFFFF;
         border-radius: 5px;
         padding: 30px 50px 30px 30px;
-        max-height: 90vh;
-        overflow-y: auto;
+        max-height: 95vh;
         z-index: 111;
         @include _576px() {
             padding: 40px 10px 20px;
@@ -4331,6 +4326,13 @@ header {
         }
     }
 }
+.results-ajax_modal {
+    .table_modal {
+        .content {
+            overflow-y: hidden;
+        }
+    }
+} 
 #sign_in {
     padding-top: 4rem;
     @include _576px() {

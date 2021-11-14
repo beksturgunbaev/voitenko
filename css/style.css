@@ -5453,11 +5453,9 @@ header .burger_menu_personal .line3.show {
   width: 48%;
 }
 
-@media (max-width: 1200px) {
-  #personal_room .personal_main .directors_reports .results_table th {
-    font-size: 16px !important;
-    line-height: 20px !important;
-  }
+#personal_room .personal_main .directors_reports .results_table th {
+  font-size: 12px !important;
+  line-height: 16px !important;
 }
 
 @media (max-width: 576px) {
@@ -5467,11 +5465,9 @@ header .burger_menu_personal .line3.show {
   }
 }
 
-@media (max-width: 1200px) {
-  #personal_room .personal_main .directors_reports .results_table td {
-    font-size: 16px !important;
-    line-height: 20px !important;
-  }
+#personal_room .personal_main .directors_reports .results_table td {
+  font-size: 12px !important;
+  line-height: 14px !important;
 }
 
 @media (max-width: 576px) {
@@ -6525,8 +6521,7 @@ header .burger_menu_personal .line3.show {
   background: #FFFFFF;
   border-radius: 5px;
   padding: 30px 50px 30px 30px;
-  max-height: 90vh;
-  overflow-y: auto;
+  max-height: 95vh;
   z-index: 111;
 }
 
@@ -6568,6 +6563,10 @@ header .burger_menu_personal .line3.show {
 
 .table_modal .content select:focus {
   outline: none;
+}
+
+.results-ajax_modal .table_modal .content {
+  overflow-y: hidden;
 }
 
 #sign_in {

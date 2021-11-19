@@ -2672,6 +2672,9 @@ header {
                     }
                     svg {
                         width: 18px !important;
+                        @include _767px() {
+                            width: 10px !important;
+                        }
                     }
                 }
                 @include _576px() {

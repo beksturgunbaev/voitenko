@@ -175,6 +175,18 @@ $(document).ready(function() {
             }
         });
     });
+    // Логика выбора checkbox на странице оплаты директора:
+    $('.check_table_time').on('click', function() {
+        if($(this).attr('checked', true)) {
+            $(this).parent().next().children().prop('checked', false);
+            console.log($(this).parent().next().children());
+        }
+    });
+    $('.check_table_cost').on('click', function() {
+        if($(this).attr('checked', true)) {
+            $(this).parent().prev('td').children().prop('checked', false);
+        }
+    });
 });
 
 
@@ -251,3 +263,4 @@ function goResult() {
 function goOnlineShop() {
     window.location = 'online-shop.html';
 }
+

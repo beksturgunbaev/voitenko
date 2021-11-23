@@ -4087,6 +4087,12 @@ header .burger_menu_personal .line3.show {
   width: 18px !important;
 }
 
+@media (max-width: 767px) {
+  #personal_room .personal_main .categories_block .measurements-table td svg {
+    width: 10px !important;
+  }
+}
+
 @media (max-width: 576px) {
   #personal_room .personal_main .categories_block .measurements-table {
     display: none !important;

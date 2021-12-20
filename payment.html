@@ -76,7 +76,7 @@
                         </div>
                         <div class="input_div">
                             <p>Телефон*</p>
-                            <input name="phone" class="payment_field phone_field" type="tel" required>
+                            <input name="phone" class="payment_field phone_field" oninput="this.value = this.value.replace(/[^0-9+]/g, '').replace(/(\..*?)\..*/g, '$1');" type="tel" placeholder="8-999-999-99-99" required>
                         </div>
                         <div class="input_div">
                             <p>E-mail*</p>

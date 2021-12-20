@@ -544,6 +544,9 @@ header {
     }
     .main_img {
         margin-left: -50px;
+        img {
+            max-width: 100%;
+        }
         @include _1400px() {
             margin-left: 0;
         }
@@ -669,6 +672,9 @@ header {
     }
     .header-title {
         margin: 5rem 0 4rem;
+        @include _767px() {
+            margin: 3rem 0 3rem;
+        }
         h2 {
             &::before {
                 content: 'ЧТО ВАС ЖДЁТ';
@@ -764,14 +770,23 @@ header {
     }
 }
 #costs {
+    @include _767px() {
+        padding-top: 0 !important;
+    }
     .header-title {
         h2 {
             &::before {
                 content: 'Пакеты';
             }
+            @include _767px() {
+                margin-bottom: 20px;
+            }
         }
     }
     .card_parent {
+        @include _767px() {
+            margin-top: 0 !important;
+        }
         .cost_card {
             border: 1px solid #EF5448;
             border-radius: 40px;
@@ -1021,6 +1036,9 @@ header {
 }
 #testimonials {
     padding-top: 100px;
+    @include _767px() {
+        padding-top: 60px;
+    }
     .header-title {
         h2 {
             &::before {
@@ -1726,7 +1744,16 @@ header {
         }
     }
     .payment_method {
-        a {
+        .payment_method_item {
+            cursor: pointer;
+            opacity: .6;
+            transition: .2s;
+            &:hover {
+                opacity: 1;
+            }
+            &.choose_payment {
+                opacity: 1;
+            }
             margin-right: 20px;
             text-align: center;
             p {
@@ -2440,6 +2467,15 @@ header {
     @include _767px() {
         padding: 30px 0;
     }
+    .how-to-measure_modal {
+        .content {
+            img {
+                @include _767px() {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
     .personal_main {
         z-index: 1;
         .personal_img {
@@ -2642,6 +2678,12 @@ header {
                     @include _1200px() {
                         font-size: 10px;
                         line-height: 12px;
+                    }
+                    svg {
+                        width: 18px !important;
+                        @include _767px() {
+                            width: 10px !important;
+                        }
                     }
                 }
                 @include _576px() {
@@ -2936,6 +2978,11 @@ header {
                 margin: 30px 0;
                 &:hover {
                     background: #EF5448;
+                }
+            }
+            .buttton {
+                @include _1200px() {
+                    position: inherit;
                 }
             }
             .measurements_link {
@@ -3565,20 +3612,16 @@ header {
             }
             .results_table {
                 th {
-                    @include _1200px() {
-                        font-size: 16px !important;
-                        line-height: 20px !important;
-                    }
+                    font-size: 12px !important;
+                    line-height: 16px !important;
                     @include _576px() {
                         font-size: 8px !important;
                         line-height: 10px !important;
                     }
                 }
                 td {
-                    @include _1200px() {
-                        font-size: 16px !important;
-                        line-height: 20px !important;
-                    }
+                    font-size: 12px !important;
+                    line-height: 14px !important;
                     @include _576px() {
                         font-size: 8px !important;
                         line-height: 10px !important;
@@ -4244,6 +4287,8 @@ header {
         cursor: pointer;
     }
 }
+
+
 .table_modal {
     position: fixed;
     top: 0;
@@ -4269,6 +4314,8 @@ header {
         background: #FFFFFF;
         border-radius: 5px;
         padding: 30px 50px 30px 30px;
+        max-height: 95vh;
+        z-index: 111;
         @include _576px() {
             padding: 40px 10px 20px;
             width: 95%;
@@ -4296,6 +4343,13 @@ header {
         }
     }
 }
+.results-ajax_modal {
+    .table_modal {
+        .content {
+            overflow-y: hidden;
+        }
+    }
+} 
 #sign_in {
     padding-top: 4rem;
     @include _576px() {
@@ -4340,6 +4394,8 @@ header {
                 height: 40px;
                 border: 1px solid #D8D8D8;
                 border-radius: 3px;
+                padding-left: 7px;
+                padding-right: 7px;
                 &:focus {
                     outline: none;
                 }

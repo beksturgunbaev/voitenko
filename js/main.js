@@ -72,13 +72,6 @@ $(document).ready(function() {
     $('.checking_checkbox_one').click(function() {
         $('.input_checking_two').prop('checked', false);
     });
-    $('.table_checkbox_one').click(function() {
-        $('.table_checkbox_two input').prop('checked', false);
-    });
-    $('.table_checkbox_two').click(function() {
-        $('.table_checkbox_one input').prop('checked', false);
-    });
-
 
     // Card's slider:
     $('.card_slider').slick({
@@ -160,25 +153,45 @@ $(document).ready(function() {
         $('html').removeClass('active');
     });
 
-    // Input mask for telephone number:
-    $('.phone_field').inputmask("phone", {
-        placeholder: '#',
-        showMaskOnHover: false,
+    // ALlow for input type tel only numbers and :
+    $('input[type="tel"]').click(function() {
+        var $input = $(this);
+        $input.val($input.val().replace(/[^\d]+/g,''));
     });
-        
-    Inputmask.extendAliases({
-        my_phone: {
-            alias: "abstractphone",
-            phoneCodes: [{
-            mask: "+7(###) ###-##-##",
-            }],
+
+    // Choose payment method:
+    $('.payment_method_item').on('click', function() {
+        $('.payment_method_item').removeClass('choose_payment');
+        $(this).addClass('choose_payment');
+    });
+    //  Close the modal
+   jQuery(function($){
+	$(document).mouseup(function (e){ 
+		var div = $(".content"); 
+		if (!div.is(e.target) 
+		    && div.has(e.target).length === 0) {
+                $('.table_modal').removeClass('active');
+                $('html').removeClass('active');
+            }
+        });
+    });
+    // Логика выбора checkbox на странице оплаты директора:
+    $('.check_table_time').on('click', function() {
+        if($(this).attr('checked', true)) {
+            $(this).parent().next().children().prop('checked', false);
+            console.log($(this).parent().next().children());
         }
     });
-    $('.phone_field').inputmask("my_phone");
+    $('.check_table_cost').on('click', function() {
+        if($(this).attr('checked', true)) {
+            $(this).parent().prev('td').children().prop('checked', false);
+        }
+    });
 });
 
 
 // ==================================>    VANILLA JS <=======================================
+
 // Accordion:
 const acc = document.getElementsByClassName("acc_btn");
 
@@ -250,3 +263,4 @@ function goResult() {
 function goOnlineShop() {
     window.location = 'online-shop.html';
 }
+

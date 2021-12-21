@@ -2467,6 +2467,15 @@ header {
     @include _767px() {
         padding: 30px 0;
     }
+    .how-to-measure_modal {
+        .content {
+            img {
+                @include _767px() {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
     .personal_main {
         z-index: 1;
         .personal_img {
@@ -2969,6 +2978,11 @@ header {
                 margin: 30px 0;
                 &:hover {
                     background: #EF5448;
+                }
+            }
+            .buttton {
+                @include _1200px() {
+                    position: inherit;
                 }
             }
             .measurements_link {
